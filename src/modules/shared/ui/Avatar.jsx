@@ -9,7 +9,7 @@ const Avatar = () => {
   return (
     <div className="avatar cursor-pointer" title={user?.displayName}>
       <div className="ring-primary ring-offset-base-100 w-7 rounded-full ring-2 ring-offset-2">
-        <img src={img} alt="avatar" className="w-full rounded-full" />{" "}
+        <img src={img} alt="avatar" className="w-full rounded-full " />
       </div>
     </div>
   );
