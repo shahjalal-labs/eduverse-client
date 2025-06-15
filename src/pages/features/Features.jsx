@@ -70,7 +70,7 @@ const Features = () => {
     <section className="py-20 bg-gradient-to-b from-base-200 to-base-100">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-neutral mb-4"
+          className="text-3xl md:text-4xl font-bold mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -102,7 +102,7 @@ const Features = () => {
               >
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-neutral group-hover:text-primary duration-300">
+              <h3 className="text-xl font-semibold text-sky-300 group-hover:text-primary duration-300">
                 {feature.title}
               </h3>
               <p className="text-gray-500 text-sm mt-2">

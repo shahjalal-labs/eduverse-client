@@ -7,7 +7,7 @@ const FAQ = () => {
   return (
     <div className="space-y-4 my-10 p-8">
       {" "}
-      <h2 className="text-3xl font-bold text-center mb-10 font-courgette text-shadow-lg text-shadow-purple-200">
+      <h2 className="text-3xl font-bold text-center mb-10 font-courgette text-shadow-sm text-shadow-purple-500">
         <TypewriterText words={["Frequently Asked Questions"]} />
       </h2>
       {/* Added space-y for better visual separation */}

@@ -6,6 +6,7 @@ const customAlert = ({
   icon = "success",
   timer = 1500,
   showConfirmButton = false,
+  showCloseButton = false,
 }) => {
   Swal.fire({
     title,
@@ -13,6 +14,8 @@ const customAlert = ({
     icon,
     showConfirmButton,
     timer,
+    showCloseButton,
+    timerProgressBar: true,
   });
 };
 

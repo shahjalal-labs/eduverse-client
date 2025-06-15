@@ -23,7 +23,7 @@ const Errorpage = () => {
             <div onClick={() => navigate("/")} className="flex-1">
               <button className="btn btn-block rounded-full ">Home</button>
             </div>
-            <div className="flex-1 " onClick={() => navigate(navigate(-1))}>
+            <div className="flex-1 " onClick={() => navigate(-1)}>
               <button className="btn btn-block rounded-full"> Back</button>
             </div>
           </div>

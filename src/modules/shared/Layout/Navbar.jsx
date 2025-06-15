@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
               <DropDown>
                 <Avatar />
               </DropDown>

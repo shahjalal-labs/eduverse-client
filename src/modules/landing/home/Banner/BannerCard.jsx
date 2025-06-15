@@ -28,7 +28,7 @@ const BannerCard = () => {
         academic goals, together.
       </p>
       <button className="btn btn-info btn-active rounded-full text-white">
-        <Link to="/jobs">Explore Jobs</Link>
+        <Link to="/assignments">Explore Assignments</Link>
       </button>
     </div>
   );
