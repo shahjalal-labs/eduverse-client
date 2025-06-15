@@ -29,3 +29,7 @@ body {
 .flex-center {
   @apply flex items-center justify-center;
 }
+
+.active {
+  @apply text-red-500;
+}
