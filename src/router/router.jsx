@@ -5,6 +5,9 @@ import ProtectedRoute from "./ProtectedRoute";
 import AuthRoute from "../modules/Auth/AuthRoute";
 import Errorpage from "./ErrorPage";
 import assignmentRoutes from "../modules/assignments/assignmentRoutes";
+import AboutUs from "../modules/shared/Layout/footerPages/AboutUs";
+import ContactUs from "../modules/shared/Layout/footerPages/ContactUs";
+import TermsCondition from "../modules/shared/Layout/footerPages/TermsCondition";
 
 const router = createBrowserRouter([
   {
@@ -21,11 +24,21 @@ const router = createBrowserRouter([
 
       // assignments route
       ...assignmentRoutes,
+
+      //footer pages
+      {
+        path: "/about-us",
+        Component: AboutUs,
+      },
+      {
+        path: "/contact-us",
+        Component: ContactUs,
+      },
+      {
+        path: "/terms-condition",
+        Component: TermsCondition,
+      },
     ],
-  },
-  {
-    path: "/about",
-    element: <div>About</div>,
   },
 
   AuthRoute,

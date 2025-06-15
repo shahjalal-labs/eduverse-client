@@ -39,10 +39,10 @@ const DropDown = ({ children }) => {
             setThemeLight(!themeLight);
           }}
           className={`border ml-[-8px] mt-2 px-4 py-1 rounded-full cursor-pointer  text-white scale-85 
-            ${themeLight ? "bg-black border" : "bg-gray-400 border"}
+            ${themeLight ? "bg-gray-400 border" : " bg-black border"}
 `}
         >
-          {themeLight ? (
+          {!themeLight ? (
             <span className="flex items-center gap-3 text-lg font-semibold ">
               <Sun />
               Light
