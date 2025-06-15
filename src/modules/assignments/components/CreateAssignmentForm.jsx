@@ -22,7 +22,7 @@ const CreateAssignmentForm = (props) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white rounded-2xl shadow-2xl p-8 space-y-6 animate-fade-in-up"
+      className="rounded-2xl shadow-2xl p-8 space-y-6 animate-fade-in-up"
     >
       <div>
         <label className="block text-lg font-semibold text-gray-700 mb-2">

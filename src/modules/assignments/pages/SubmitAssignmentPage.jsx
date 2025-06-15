@@ -39,7 +39,7 @@ const SubmitAssignmentPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh]">
-      <div className="my-10  justify-center max-w-xl mx-auto p-6 rounded shadow bg-white">
+      <div className="my-10  justify-center max-w-xl mx-auto p-6 rounded shadow ">
         <h2 className="text-2xl font-semibold mb-4">Submit Assignment</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <input

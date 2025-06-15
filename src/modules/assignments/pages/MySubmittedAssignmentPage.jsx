@@ -60,25 +60,25 @@ const MySubmittedAssignmentPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white shadow-xl hover:shadow-2xl rounded-2xl p-6 transition-all duration-300 hover-effect"
+                className=" shadow-xl hover:shadow-2xl rounded-2xl p-6 transition-all duration-300 hover-effect"
               >
                 <div className="flex items-center gap-3 mb-2">
                   <FaBook className="text-blue-500 text-xl" />
                   <h2 className="text-lg font-semibold">{title}</h2>
                 </div>
 
-                <p className="text-sm text-gray-600 mb-1">
-                  <span className="font-medium text-gray-800">Notes:</span>{" "}
+                <p className="text-sm  mb-1">
+                  <span className="font-medium ">Notes:</span>{" "}
                   {notes || "No notes provided"}
                 </p>
 
-                <p className="text-sm text-gray-600 mb-1">
-                  <span className="font-medium text-gray-800">Examinee:</span>{" "}
+                <p className="text-sm  mb-1">
+                  <span className="font-medium ">Examinee:</span>{" "}
                   {examinee || "No notes provided"}
                 </p>
 
-                <p className="text-sm text-gray-600 mb-1">
-                  <span className="font-medium text-gray-800">Google Doc:</span>{" "}
+                <p className="text-sm  mb-1">
+                  <span className="font-medium ">Google Doc:</span>{" "}
                   <Link
                     to={googleDocLink}
                     target="_blank"
@@ -89,10 +89,8 @@ const MySubmittedAssignmentPage = () => {
                   </Link>
                 </p>
 
-                <p className="text-sm text-gray-600 mb-1">
-                  <span className="font-medium text-gray-800">
-                    Total Marks:
-                  </span>{" "}
+                <p className="text-sm  mb-1">
+                  <span className="font-medium 0">Total Marks:</span>{" "}
                   {assignmentId?.marks ?? "N/A"}
                 </p>
 

@@ -11,7 +11,7 @@ const AssignmentDetailsCard = ({ assignmentDetails }) => {
       initial={{ opacity: 0, scale: 0.85 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="max-w-4xl w-full bg-white rounded-3xl shadow-2xl hover:shadow-4xl hover:scale-[1.03] transition-transform duration-300 cursor-pointer px-8 py-4"
+      className="max-w-4xl w-full  rounded-3xl shadow-2xl hover:shadow-4xl hover:scale-[1.03] transition-transform duration-300 cursor-pointer px-8 py-4"
     >
       {/* Thumbnail */}
       <div className="overflow-hidden rounded-2xl shadow-lg mb-6">
