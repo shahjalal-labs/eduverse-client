@@ -3,6 +3,7 @@ import { fetchData } from "../../../utils/fetchData";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import AssignmentDetailsCard from "../components/updateAssignments/AssignmentDetails/AssignmentDetailsCard";
+import UseHelmet from "../../../hooks/useHelmet";
 const AssignmentDetailsPage = () => {
   const [assignmentDetails, setAssignmentDetails] = useState({});
   const { id } = useParams();
@@ -32,6 +33,7 @@ const AssignmentDetailsPage = () => {
   if (isSuccess) {
     return (
       <div className="sm:min-h-[80vh] flex items-center justify-center p-6 m-2 rounded">
+        <UseHelmet title="AssignmentDetails" />
         <AssignmentDetailsCard assignmentDetails={assignmentDetails} />
       </div>
     );

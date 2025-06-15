@@ -9,6 +9,7 @@ import { useNavigate } from "react-router";
 import { bottomToTop } from "../../../animation/motion";
 import { motion } from "motion/react";
 import CreateAssignmentForm from "../components/CreateAssignmentForm";
+import UseHelmet from "../../../hooks/useHelmet";
 
 const CreateAssignment = () => {
   const navigate = useNavigate();
@@ -57,6 +58,7 @@ const CreateAssignment = () => {
       className="max-w-4xl mx-auto px-6 py-16 font-sans"
       {...bottomToTop}
     >
+      <UseHelmet title="Create Assignment" />
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4 animate-fade-in">
           Create a New Assignment ✍️
