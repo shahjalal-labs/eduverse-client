@@ -7,11 +7,11 @@ export const navItems = [
   },
   {
     name: "Assignments",
-    path: "assignments",
+    path: "/assignments",
   },
   {
     name: "Pending Assignments",
-    path: "assignments/pending",
+    path: "/assignments/pending",
   },
 ];
 

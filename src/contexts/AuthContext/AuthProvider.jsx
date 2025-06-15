@@ -1,42 +1,18 @@
-import {
-  GithubAuthProvider,
-  GoogleAuthProvider,
-  onAuthStateChanged,
-  signInWithPopup,
-  signOut,
-} from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
 import { auth } from "../../firebase/firebase.init";
 import axios from "axios";
+import useFirebaseUtils from "../../firebase/firebaseUtility";
 
 const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
-  const googleProvder = new GoogleAuthProvider();
-
-  const githubProvider = new GithubAuthProvider();
-
-  const googleSignIn = () => {
-    setLoading(true);
-    return signInWithPopup(auth, googleProvder);
-  };
-  const githubSignIn = () => {
-    setLoading(true);
-    return signInWithPopup(auth, githubProvider);
-  };
-
-  const signoutUser = () => {
-    setLoading(true);
-    return signOut(auth);
-  };
-
+  const firebaseUtils = useFirebaseUtils(setLoading);
   const authInfo = {
-    googleSignIn,
-    githubSignIn,
     loading,
     user,
-    signoutUser,
+    ...firebaseUtils,
   };
 
   useEffect(() => {

@@ -10,7 +10,7 @@ const SocialLogin = () => {
   const navigate = useNavigate();
 
   const location = useLocation();
-  console.log(location, "SocialLogin.jsx", 14);
+  // console.log(location, "SocialLogin.jsx", 14);
 
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();

@@ -8,11 +8,11 @@ const SignUpText = () => {
           className="text-center text-xl sm:text-3xl font-semibold font-kaushan 
           "
         >
-          WorkElevate connects talent with opportunity.
+          EduVerse connects talent with opportunity.
         </h2>
         <p className="text-center text-gray-500 ext-sm mb-10 mt-2">
-          Sign up to access thousands of jobs, connect with employers, and take
-          control of your career.
+          Unlock collaborative learning, connect with your study friends, and
+          ace your assignments together.
         </p>
       </motion.div>
     </div>
