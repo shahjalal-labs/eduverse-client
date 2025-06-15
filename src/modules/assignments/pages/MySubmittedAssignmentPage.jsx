@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import ErrorMessage from "../../../utils/ErrorMessage";
 import { motion } from "motion/react";
 import {
   FaBook,
@@ -16,7 +17,7 @@ const MySubmittedAssignmentPage = () => {
   const { user } = useAuth();
   const email = user?.email;
 
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ["submitted-assignments", email],
     queryFn: () => fetchData(`/submission/my-submissions?email=${email}`),
     enabled: !!email,
@@ -26,6 +27,7 @@ const MySubmittedAssignmentPage = () => {
 
   if (isLoading)
     return <div className="text-center mt-20 text-lg">Loading...</div>;
+  if (isError) return <ErrorMessage error={error} />;
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
@@ -42,7 +44,6 @@ const MySubmittedAssignmentPage = () => {
           submitted?.map((item, idx) => {
             const {
               _id,
-              assignmentId: { title },
               notes,
               googleDocLink,
               status,
@@ -51,8 +52,10 @@ const MySubmittedAssignmentPage = () => {
               createdAt,
               studentEmail: examinee,
               evaluatedBy: examiner,
-              assignmentId,
+              // assignmentId,
             } = item;
+
+            const assignmentId = item?.assignmentId;
 
             return (
               <motion.div
@@ -64,7 +67,9 @@ const MySubmittedAssignmentPage = () => {
               >
                 <div className="flex items-center gap-3 mb-2">
                   <FaBook className="text-blue-500 text-xl" />
-                  <h2 className="text-lg font-semibold">{title}</h2>
+                  <h2 className="text-lg font-semibold">
+                    {assignmentId?.title || "No title provided"}
+                  </h2>
                 </div>
 
                 <p className="text-sm  mb-1">
@@ -74,7 +79,7 @@ const MySubmittedAssignmentPage = () => {
 
                 <p className="text-sm  mb-1">
                   <span className="font-medium ">Examinee:</span>{" "}
-                  {examinee || "No notes provided"}
+                  {examinee || "No examinee provided"}
                 </p>
 
                 <p className="text-sm  mb-1">
