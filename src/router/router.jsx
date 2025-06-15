@@ -9,6 +9,7 @@ import AboutUs from "../modules/shared/Layout/footerPages/AboutUs";
 import ContactUs from "../modules/shared/Layout/footerPages/ContactUs";
 import TermsCondition from "../modules/shared/Layout/footerPages/TermsCondition";
 import CookiePolicy from "../modules/shared/Layout/footerPages/CookiePolicy";
+import PrivacyPolicy from "../modules/shared/Layout/footerPages/PrivacyPolicy";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: "terms-condition",
         Component: TermsCondition,
+      },
+      {
+        path: "cookie-policy",
+        Component: CookiePolicy,
+      },
+      {
+        path: "privacy-policy",
+        Component: PrivacyPolicy,
       },
       {
         path: "cookie-policy",
