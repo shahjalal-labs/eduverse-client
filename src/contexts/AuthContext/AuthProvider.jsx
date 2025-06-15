@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser?.email) {
         axios
           .post(
-            "http://localhost:5000/api/v1/auth/create-jwt",
+            "https://server-edu-verse.vercel.app/api/v1/auth/create-jwt",
             { email: currentUser.email },
             { withCredentials: true },
           )

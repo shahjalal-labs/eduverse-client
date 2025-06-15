@@ -37,7 +37,7 @@ const DropDown = ({ children }) => {
             themeSwither();
             setThemeLight(!themeLight);
           }}
-          className={`border ml-[-8px] px-4 py-1 rounded-full  text-white scale-85 
+          className={`border ml-[-8px] mt-2 px-4 py-1 rounded-full cursor-pointer  text-white scale-85 
             ${themeLight ? "bg-black border" : "bg-gray-400 border"}
 `}
         >
