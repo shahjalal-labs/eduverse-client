@@ -13,7 +13,7 @@ import {
 
 const ContactUs = () => {
   return (
-    <section className="min-h-[80vh] my-16 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white px-6 sm:px-12 lg:px-32 py-20 rounded-2xl">
+    <section className="min-h-[80vh] my-16 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white px-6 sm:px-12 lg:px-32 py-20 rounded-xl">
       {/* Header */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}

@@ -42,7 +42,7 @@ const CommonFooter = () => {
           <Link to="" className="link link-hover">
             Privacy policy
           </Link>
-          <Link to="" className="link link-hover">
+          <Link to="/cookie-policy" className="link link-hover">
             Cookie policy
           </Link>
         </nav>

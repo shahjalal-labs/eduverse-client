@@ -8,6 +8,7 @@ import assignmentRoutes from "../modules/assignments/assignmentRoutes";
 import AboutUs from "../modules/shared/Layout/footerPages/AboutUs";
 import ContactUs from "../modules/shared/Layout/footerPages/ContactUs";
 import TermsCondition from "../modules/shared/Layout/footerPages/TermsCondition";
+import CookiePolicy from "../modules/shared/Layout/footerPages/CookiePolicy";
 
 const router = createBrowserRouter([
   {
@@ -27,16 +28,20 @@ const router = createBrowserRouter([
 
       //footer pages
       {
-        path: "/about-us",
+        path: "about-us",
         Component: AboutUs,
       },
       {
-        path: "/contact-us",
+        path: "contact-us",
         Component: ContactUs,
       },
       {
-        path: "/terms-condition",
+        path: "terms-condition",
         Component: TermsCondition,
+      },
+      {
+        path: "cookie-policy",
+        Component: CookiePolicy,
       },
     ],
   },
