@@ -11,6 +11,7 @@ const AboutUs = () => {
   return (
     <section className="rounded-xl my-16 min-h-screen px-6 sm:px-12 lg:px-24 py-20 bg-gradient-to-b from-[#111827] to-[#1f2937] text-white">
       {/* Page Heading */}
+      {/* <UseHelmet title="About Us" /> */}
       <motion.h1
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}

@@ -1,19 +1,19 @@
 import { useMutation } from "@tanstack/react-query";
 import customAlert from "../../../utils/customAlert";
 import useAuth from "../../../hooks/useAuth";
-import { format } from "date-fns";
 import { motion } from "motion/react";
 import { deleteData } from "../../../utils/deleteData";
 import { leftToRight } from "../../../animation/motion";
 import AssignmentCardBody from "./AssignmentCardBody";
-const AssignmentCard = ({ assignment }) => {
-  console.log(assignment, "AssignmentCard.jsx", 10);
+const AssignmentCard = ({ assignment, assignments, setAssignments }) => {
+  // console.log(assignment, "AssignmentCard.jsx", 10);
   const { user } = useAuth();
   const { mutate: deleteAssignment, isPending } = useMutation({
     mutationFn: ({ endpoint, body }) => deleteData(endpoint, body),
     mutationKey: ["deleteAssignment", "deleteSingleassignment"],
     onSuccess: (data) => {
       console.log("success", data);
+      setAssignments(assignments.filter((item) => item._id !== assignment._id));
       customAlert({
         text: "Assignment deleted successfully",
         timer: 2000,

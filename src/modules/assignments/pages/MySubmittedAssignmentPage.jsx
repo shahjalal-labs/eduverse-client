@@ -12,6 +12,7 @@ import {
 import { fetchData } from "../../../utils/fetchData";
 import useAuth from "../../../hooks/useAuth";
 import { Link } from "react-router";
+import UseHelmet from "../../../hooks/useHelmet";
 
 const MySubmittedAssignmentPage = () => {
   const { user } = useAuth();
@@ -31,6 +32,7 @@ const MySubmittedAssignmentPage = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
+      <UseHelmet title="My Submitted Assignments" />
       <h1 className="text-3xl font-bold mb-9 text-center">
         📘 My Submitted Assignments
       </h1>

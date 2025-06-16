@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import UpdateAssignmentForm from "../components/updateAssignments/UpdateAssignmentForm";
 import updateData from "../../../utils/updateData";
 import customAlert from "../../../utils/customAlert";
+import UseHelmet from "../../../hooks/useHelmet";
 
 const UpdateAssignment = () => {
   const {
@@ -69,6 +70,7 @@ const UpdateAssignment = () => {
 
   return (
     <div className="my-18 max-w-[800px] mx-auto ">
+      <UseHelmet title="Update Assignment" />
       {isPending && <Spinner />}
       {isError && <ErrorMessage error={error} />}
       {isSuccess && (

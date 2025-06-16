@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router";
 import postData from "../../../utils/postData";
 import useAuth from "../../../hooks/useAuth";
 import customAlert from "../../../utils/customAlert";
+import UseHelmet from "../../../hooks/useHelmet";
 
 const SubmitAssignmentPage = () => {
   const navigate = useNavigate();
@@ -39,6 +40,7 @@ const SubmitAssignmentPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh]">
+      <UseHelmet title="Submit Assignment" />
       <div className="my-10  justify-center max-w-xl mx-auto p-6 rounded shadow ">
         <h2 className="text-2xl font-semibold mb-4">Submit Assignment</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

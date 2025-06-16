@@ -8,10 +8,12 @@ import {
   FaSmile,
 } from "react-icons/fa";
 import { Link } from "react-router";
+import UseHelmet from "../../../../hooks/useHelmet";
 
 const TermsCondition = () => {
   return (
     <div className="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white py-12 px-4 sm:px-8 md:px-16 lg:px-32 space-y-8">
+      <UseHelmet title="Terms & Conditions" />
       <motion.h1
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}

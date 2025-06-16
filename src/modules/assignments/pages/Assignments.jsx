@@ -7,6 +7,7 @@ import { fetchData } from "../../../utils/fetchData";
 import AssignmentCard from "../components/AssignmentCard";
 import AssignmentsPageIntro from "../components/AssignmentsPageIntro";
 import UseHelmet from "../../../hooks/useHelmet";
+import FilterSearch from "../components/FilterSearch";
 
 const Assignments = () => {
   const [assignments, setAssignments] = useState([]);
@@ -40,56 +41,52 @@ const Assignments = () => {
     <div className="px-4 py-10 max-w-7xl mx-auto">
       <UseHelmet title="Assignments" />
       <AssignmentsPageIntro />
-
       {/* Filter & Search Controls */}
-      <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
-        <input
-          type="text"
-          placeholder="Search by title..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="input input-bordered w-full sm:max-w-xs"
-        />
-        <div className="flex-center gap-1  w-full sm:max-w-xs">
-          <select
-            className="select select-bordered w-full sm:max-w-xs flex-1"
-            value={difficulty}
-            onChange={(e) => setDifficulty(e.target.value)}
-          >
-            <option value="">All Difficulties</option>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-          <button className="btn btn-primary" onClick={refetch}>
-            Filter
-          </button>
-        </div>
-      </div>
-
+      <FilterSearch
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        difficulty={difficulty}
+        setDifficulty={setDifficulty}
+        refetch={refetch}
+      />
       {/* Status */}
       {isError && <ErrorMessage error={error} />}
       {isPending && <Spinner />}
 
       {/* Assignments Grid */}
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 "
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: {},
-          visible: {
-            transition: {
-              staggerChildren: 0.15,
+      {isSuccess && (
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 "
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
             },
-          },
-        }}
-      >
-        {isSuccess &&
-          assignments?.map((assignment) => (
-            <AssignmentCard key={assignment._id} assignment={assignment} />
-          ))}
-      </motion.div>
+          }}
+        >
+          {assignments.length > 0 ? (
+            assignments.map((assignment) => (
+              <AssignmentCard
+                key={assignment._id}
+                assignment={assignment}
+                assignments={assignments}
+                setAssignments={setAssignments}
+              />
+            ))
+          ) : (
+            <p className="text-gray-500">No assignments available.</p>
+          )}
+
+          {/* {assignments?.length &&
+            assignments?.map((assignment) => (
+              <AssignmentCard key={assignment._id} assignment={assignment} />
+            ))} */}
+        </motion.div>
+      )}
     </div>
   );
 };
