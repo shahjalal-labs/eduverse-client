@@ -36,7 +36,7 @@ const EvaluateSubmissionPage = () => {
         endpoint: `submission/evaluate/${id}`,
         body: evaluatedData,
       });
-      console.log(`result`, result);
+      // console.log(`result`, result);
 
       if (result?.success) {
         customAlert({
@@ -49,7 +49,7 @@ const EvaluateSubmissionPage = () => {
         }, 2000);
       }
     } catch (err) {
-      console.error(err, "EvaluateSubmissionPage.jsx", 45);
+      // console.error(err, "EvaluateSubmissionPage.jsx", 45);
       setError(err?.response?.data?.message);
       customAlert({
         title: "⚠️ Opps! Error occured!",

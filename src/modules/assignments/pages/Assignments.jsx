@@ -80,11 +80,6 @@ const Assignments = () => {
           ) : (
             <p className="text-gray-500">No assignments available.</p>
           )}
-
-          {/* {assignments?.length &&
-            assignments?.map((assignment) => (
-              <AssignmentCard key={assignment._id} assignment={assignment} />
-            ))} */}
         </motion.div>
       )}
     </div>

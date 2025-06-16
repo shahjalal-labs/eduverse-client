@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { motion } from "motion/react";
 import {
   FaGithub,
@@ -12,6 +12,15 @@ import {
 } from "react-icons/fa";
 
 const ContactUs = () => {
+  const location = useLocation();
+
+  let redirect;
+
+  if (location?.pathname?.toLowerCase()?.includes("contact")) {
+    redirect = "/";
+  } else {
+    redirect = "/assignments";
+  }
   return (
     <section className="min-h-[80vh] my-16 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white px-6 sm:px-12 lg:px-32 py-20 rounded-xl">
       {/* Header */}
@@ -142,7 +151,7 @@ const ContactUs = () => {
         className="mt-16 text-center"
       >
         <Link
-          to="/"
+          to={redirect}
           className="inline-block bg-cyan-500 hover:bg-cyan-400 px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition"
         >
           🚀 Start Exploring EduVerse
