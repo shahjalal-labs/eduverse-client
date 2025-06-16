@@ -58,32 +58,32 @@ const ContactUs = () => {
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-green-400" />
-              <a
-                href="tel:+8801540325659"
+              <Link
+                to="tel:+8801540325659"
                 className="hover:underline hover:text-white"
               >
                 +880 1540-325659
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-yellow-400" />
-              <a
-                href="mailto:shahjalalmern@gmail.com"
+              <Link
+                to="mailto:muhommodshahjalal@gmail.com"
                 className="hover:underline hover:text-white"
               >
                 shahjalalmern@gmail.com
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-3">
               <FaGithub className="text-white" />
-              <a
-                href="https://github.com/shahjalal-labs/client-EduVerse-withjwt"
+              <Link
+                to="https://github.com/shahjalal-labs/client-EduVerse-withjwt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline hover:text-white"
               >
                 GitHub Repo
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-3">
               <FaRocket className="text-cyan-400" />
@@ -93,24 +93,24 @@ const ContactUs = () => {
 
           {/* Socials */}
           <div className="flex gap-6 mt-6 text-xl">
-            <a
-              href="https://www.youtube.com/@shahjalal"
+            <Link
+              to="https://www.youtube.com/@shahjalal"
               target="_blank"
               rel="noopener noreferrer"
               className="text-red-500 hover:text-white transition"
               title="YouTube Channel"
             >
               <FaYoutube />
-            </a>
-            <a
-              href="https://facebook.com/shahjalal.labs"
+            </Link>
+            <Link
+              to="https://facebook.com/shahjalal.labs"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-white transition"
               title="Facebook"
             >
               <FaFacebook />
-            </a>
+            </Link>
             <Link
               to="https://www.linkedin.com/in/md-sj-825bb4341/"
               target="_blank"
