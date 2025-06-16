@@ -7,9 +7,9 @@ EduVerse is a **MERN-based**, fully authenticated, and interactive assignment su
 ## 🌐 Live Site
 
 🔗 [Live Client (Surge)](https://edu-verse.surge.sh/)  
-🔗 [Live Server (Vercel)](https://eduverse-server.vercel.app)
-🔗 [Client source code (github)](https://github.com/shahjalal-labs/client-EduVerse-withjwt)
-🔗 [Server source code (github)](https://github.com/shahjalal-labs/server-EduVerse-withjwt)
+🔗 [Live Server (Vercel)](https://eduverse-server.vercel.app/)
+🔗 [Client source code (github)](https://github.com/shahjalal-labs/client-EduVerse-withjwt/)
+🔗 [Server source code (github)](https://github.com/shahjalal-labs/server-EduVerse-withjwt/)
 
 ---
 
