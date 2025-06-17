@@ -30,10 +30,10 @@ const UpdateAssignmentForm = (props) => {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className={`rounded-2xl shadow-xl p-8 space-y-6 animate-fade-in-up ${isErrorForUpdate && "idden"}`}
+        className={`max-w-[500px] mx-auto rounded-2xl shadow-xl p-8 space-y-6 animate-fade-in-up ${isErrorForUpdate && "idden"}`}
       >
         <div>
-          <label className="block text-lg font-semibold text-gray-700 mb-2">
+          <label className="block text-lg font-semibold text-gray-700 mb-1">
             Title
           </label>
           <input
@@ -49,7 +49,7 @@ const UpdateAssignmentForm = (props) => {
         </div>
 
         <div>
-          <label className="block text-lg font-semibold text-gray-700 mb-2">
+          <label className="block text-lg font-semibold text-gray-700 mb-1">
             Description
           </label>
           <textarea

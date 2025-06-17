@@ -10,8 +10,8 @@
 │   │   ├── banner5-Bt3rVsGE.jpg
 │   │   ├── banner6-Dof1e_yB.jpg
 │   │   ├── banner7-CYoVP1-E.jpg
-│   │   ├── index-2-Z_DZrJ.js
-│   │   ├── index-5OnJyaGx.css
+│   │   ├── index-HlKK8APf.js
+│   │   ├── index-wq3hv6Z-.css
 │   │   ├── jobseeker1-CgAo3wI1.jpg
 │   │   ├── jobseeker2-mtN3WWmm.jpg
 │   │   └── notfound3-BzQkv1ea.jpg
@@ -26,9 +26,12 @@
 ├── src
 │   ├── animation
 │   │   ├── auth-lottie.json
+│   │   ├── create.json
+│   │   ├── evaluate.json
 │   │   ├── index.js
 │   │   ├── LottieAnimation.jsx
-│   │   └── motion.js
+│   │   ├── motion.js
+│   │   └── submit.json
 │   ├── App.jsx
 │   ├── assets
 │   │   └── images
@@ -137,6 +140,7 @@
 │   │   ├── submission
 │   │   │   ├── components
 │   │   │   │   └── evaluateSubmission
+│   │   │   │       ├── EvaluateSubmissionPageIntro.jsx
 │   │   │   │       ├── EvaluateSubmissionText.jsx
 │   │   │   │       └── EvaluateSumissionForm.jsx
 │   │   │   └── pages
@@ -192,4 +196,4 @@
 ├── structure.md
 └── vite.config.js
 
-49 directories, 144 files
+49 directories, 148 files
