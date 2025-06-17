@@ -5,6 +5,8 @@ import submitLottie from "./submit.json";
 import updateLottie from "./update-lottie.json";
 import updateManLottie from "./update-man-lottie.json";
 import gradient from "./gradient.json";
+import circle from "./circle-zoom-in-out.json";
+import coneLottie from "./cone-lottie.json";
 
 export {
   authLottie,
@@ -14,4 +16,6 @@ export {
   updateLottie,
   updateManLottie,
   gradient,
+  circle,
+  coneLottie,
 };

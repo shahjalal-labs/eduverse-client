@@ -4,6 +4,8 @@ import { fetchData } from "../../../utils/fetchData";
 import { FaPen, FaUserGraduate, FaClipboardCheck } from "react-icons/fa";
 import { Link } from "react-router";
 import UseHelmet from "../../../hooks/useHelmet";
+import LottieAnimation from "../../../animation/LottieAnimation";
+import { circle, coneLottie } from "../../../animation";
 
 const PendingAssignmentsPage = () => {
   const { data, isLoading } = useQuery({
@@ -17,8 +19,11 @@ const PendingAssignmentsPage = () => {
     return <div className="text-center mt-20 text-lg">Loading...</div>;
 
   return (
-    <div className="max-w-6xl mx-auto sm:px-4 py-10 ">
+    <div className="max-w-6xl mx-auto sm:px-4 pb-10 pt-5">
       <UseHelmet title="Pending Assignments" />
+      <div className="w-[100px] h-[100px] mx-auto hover-effect mb-2  rounded-full ">
+        <LottieAnimation anime={circle} />
+      </div>
       <h1 className="sm:text-3xl font-bold mb-6 text-center flex items-center gap-2 justify-center capitalize">
         <FaClipboardCheck className="text-blue-600 " />
         Awaiting Review & Grading

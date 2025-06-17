@@ -10,7 +10,7 @@ import updateData from "../../../utils/updateData";
 import customAlert from "../../../utils/customAlert";
 import UseHelmet from "../../../hooks/useHelmet";
 import LottieAnimation from "../../../animation/LottieAnimation";
-import { gradient, updateLottie, updateManLottie } from "../../../animation";
+import { updateLottie, updateManLottie } from "../../../animation";
 import UpdateAssignmentIntro from "../components/updateAssignments/UpdateAssignmentIntro";
 
 const UpdateAssignment = () => {
@@ -80,7 +80,7 @@ const UpdateAssignment = () => {
       {isError && <ErrorMessage error={error} />}
       {isSuccess && (
         <div>
-          <div className="w-[150px] mx-auto">
+          <div className="w-[150px] mx-auto hover-effect mb-2 rounded-lg">
             <LottieAnimation anime={updateLottie} />
           </div>
           <UpdateAssignmentIntro
@@ -88,7 +88,7 @@ const UpdateAssignment = () => {
             img={prevAssignment?.thumbnailUrl}
           />
 
-          <div className="lg:flex justify-around max-xl:gap-7 ">
+          <div className="lg:flex justify-around max-xl:gap-7 mt-5">
             <UpdateAssignmentForm
               handleSubmit={handleSubmit}
               register={register}
@@ -102,7 +102,7 @@ const UpdateAssignment = () => {
               setSelectedDate={setSelectedDate}
             />
 
-            <div className="bg-base-200 rounded-xl shadow-lg w-full flex-center max-w-[500px] mx-auto max-lg:mt-9">
+            <div className="bg-base-200 rounded-xl shadow-lg w-full flex-center max-w-[500px] mx-auto max-lg:mt-9 hover-effect">
               <LottieAnimation anime={updateManLottie} />
             </div>
           </div>

@@ -1,6 +1,6 @@
 const UpdateAssignmentIntro = ({ title, img }) => {
   return (
-    <div className="max-w-3xl mx-auto rounded-lg p-5 shadow-d mb-2 bg-base-100">
+    <div className="max-w-3xl mx-auto rounded-lg p-5 shadow-d mb-2 bg-base-100 hover-effect">
       <div className="flex justify-cente gap-3 items-center mb-4">
         <div className="w-[170px] max-lg:hidden">
           <img src={img} className="rounded-xl" />
