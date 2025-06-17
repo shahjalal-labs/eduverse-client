@@ -22,7 +22,7 @@ const CreateAssignmentForm = (props) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="rounded-2xl shadow-xl sm:p-8 p-3 space-y-2 animate-fade-in-up"
+      className="rounded-2xl shadow-sm sm:p-8 p-3 space-y-1 animate-fade-in-up "
     >
       <div>
         <label className="block sm:text-lg  font-semibold text-gray-700 mb-2">
@@ -134,7 +134,7 @@ const CreateAssignmentForm = (props) => {
       <div className="flex justify-center items-center">
         <button
           type="submit"
-          className="btn btn-primary  btn-outline rounded-full  mx-auto"
+          className="btn btn-primary mt-3 btn-outline rounded-full  mx-auto"
           disabled={isPending}
         >
           {isPending ? "Submitting..." : "Create Assignment"}
