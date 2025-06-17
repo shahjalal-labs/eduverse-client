@@ -5,7 +5,7 @@ import { FaPen, FaUserGraduate, FaClipboardCheck } from "react-icons/fa";
 import { Link } from "react-router";
 import UseHelmet from "../../../hooks/useHelmet";
 import LottieAnimation from "../../../animation/LottieAnimation";
-import { circle, coneLottie } from "../../../animation";
+import { circle, } from "../../../animation";
 
 const PendingAssignmentsPage = () => {
   const { data, isLoading } = useQuery({

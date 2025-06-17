@@ -22,10 +22,12 @@ const CreateAssignmentForm = (props) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="rounded-2xl shadow-2xl sm:p-8 p-3 space-y-2 animate-fade-in-up"
+      className="rounded-2xl shadow-xl sm:p-8 p-3 space-y-2 animate-fade-in-up"
     >
       <div>
-        <label className="block sm:text-lg  font-semibold text-gray-700 mb-2">Title</label>
+        <label className="block sm:text-lg  font-semibold text-gray-700 mb-2">
+          Title
+        </label>
         <input
           type="text"
           placeholder="Enter assignment title"
