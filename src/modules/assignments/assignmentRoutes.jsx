@@ -20,11 +20,7 @@ const assignmentRoutes = [
   },
   {
     path: "assignments",
-    element: (
-      <ProtectedRoute>
-        <Assignments />
-      </ProtectedRoute>
-    ),
+    element: <Assignments />,
   },
   {
     path: "assignments/pending",

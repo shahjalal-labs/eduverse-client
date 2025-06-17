@@ -355,3 +355,22 @@ MIT License – © 2025 Md. Shahjalal
 ---
 
 >
+
+`````
+
+```
+client github: https://github.com/Programming-Hero-Web-Course4/b11a11-client-side-shahjalal-labs
+
+server github: https://github.com/Programming-Hero-Web-Course4/b11a11-server-side-shahjalal-labs
+
+live site client: https://edu-verse.surge.sh
+
+live site server: https://server-edu-verse.vercel.app
+
+````
+`````
+
+banglabd new token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhbmdsYWJkNTE1NUBnbWFpbC5jb20iLCJpYXQiOjE3NTAxMzAzMDMsImV4cCI6MTc1MDIxNjcwM30.GzVFtAFz7I2d789iFHUT50yEQXRX0yWHGqgUzfyFY38
+
+banglabd token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhbmdsYWJkNTE1NUBnbWFpbC5jb20iLCJpYXQiOjE3NTAxMjk5MDEsImV4cCI6MTc1MDIxNjMwMX0.iw5yqyLo7EXgRwm4e67-0n31KU7t2i-F9vQa4dUD2Fk
+healtcare token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlYWx0aGNhcmUzMnFAZ21haWwuY29tIiwiaWF0IjoxNzUwMTMwMjUyLCJleHAiOjE3NTAyMTY2NTJ9.FnjIgTWA7bPLYjTDCsRXwwBSj63S_vm5zfsckPMs_Dk
