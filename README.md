@@ -6,10 +6,10 @@ EduVerse is a **MERN-based**, fully authenticated, and interactive assignment su
 
 ## 🌐 Live Site
 
-🔗 [Live Client (Surge)](https://edu-verse.surge.sh/)  
-🔗 [Live Server (Vercel)](https://eduverse-server.vercel.app/)
-🔗 [Client source code (github)](https://github.com/shahjalal-labs/client-EduVerse-withjwt/)
-🔗 [Server source code (github)](https://github.com/shahjalal-labs/server-EduVerse-withjwt/)
+🔗 [Live Client (Surge)](https://edu-verse.surge.sh/) <br >
+🔗 [Live Server (Vercel)](https://eduverse-server.vercel.app/) <br >
+🔗 [Client source code (github)](https://github.com/shahjalal-labs/client-EduVerse-withjwt/) <br >
+🔗 [Server source code (github)](https://github.com/shahjalal-labs/server-EduVerse-withjwt/)<br >
 
 ---
 
@@ -260,15 +260,15 @@ Powered by **React Router v7**
 
 ## 🧑‍💻 Developer Info
 
-| Info         | Details                                                                  |
-| ------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| 👨 Name      | Md. Shahjalal                                                            |
-| 🌍 Location  | Sharifpur, Gazipur, Dhaka, Bangladesh                                    |
-| 💼 LinkedIn  | [md-sj-825bb4341](https://www.linkedin.com/in/md-sj-825bb4341/)          |
-| 📘 Facebook  | [facebook.com](https://www.facebook.com/profile.php?id=61556383702555)   |
-| ▶️ YouTube   | [@muhommodshahjalal9811](https://www.youtube.com/@muhommodshahjalal9811) |
-| 🧠 GitHub    | [shahjalal-labs](https://github.com/shahjalal-labs)                      |
-| 📁 Portfolio | [Live](http://shahjalal-labs.surge.sh/)                                  | [Code](https://github.com/shahjalal-labs/shahjalal-portfolio) |
+| Info         | Details                                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------- |
+| 👨 Name      | Md. Shahjalal                                                                                           |
+| 🌍 Location  | Sharifpur, Gazipur, Dhaka, Bangladesh                                                                   |
+| 💼 LinkedIn  | [md-sj-825bb4341](https://www.linkedin.com/in/md-sj-825bb4341/)                                         |
+| 📘 Facebook  | [facebook.com](https://www.facebook.com/profile.php?id=61556383702555)                                  |
+| ▶️ YouTube   | [@muhommodshahjalal9811](https://www.youtube.com/@muhommodshahjalal9811)                                |
+| 🧠 GitHub    | [shahjalal-labs](https://github.com/shahjalal-labs)                                                     |
+| 📁 Portfolio | [Live](http://shahjalal-labs.surge.sh/) • [Code](https://github.com/shahjalal-labs/shahjalal-portfolio) |
 
 ---
 
