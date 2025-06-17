@@ -19,7 +19,7 @@ const PendingAssignmentsPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
       <UseHelmet title="Pending Assignments" />
-      <h1 className="text-3xl font-bold mb-6 text-center flex items-center gap-2 justify-center capitalize">
+      <h1 className="sm:text-3xl font-bold mb-6 text-center flex items-center gap-2 justify-center capitalize">
         <FaClipboardCheck className="text-blue-600 " />
         Awaiting Review & Grading
       </h1>
@@ -34,7 +34,7 @@ const PendingAssignmentsPage = () => {
           animate={{ opacity: 1 }}
           className="overflow-x-auto"
         >
-          <table className="min-w-full border border-gray-200 rounded-xl overflow-hidden">
+          <table className="min-w-full border border-gray-200 rounded-xl overflow-hidden max-md:*:text-xs">
             <thead className="bg-blue-50 text-left text-sm uppercase text-gray-600 font-semibold">
               <tr>
                 <th className="px-4 py-3">#</th>

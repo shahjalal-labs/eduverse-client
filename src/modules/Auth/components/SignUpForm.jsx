@@ -63,7 +63,7 @@ const SignUpForm = () => {
       <h2 className="text-gray-500 text-2xl text-center font-bold">
         Sign Up Now
       </h2>
-      <fieldset className="w-full  p-4 fieldset order ">
+      <fieldset className="w-full  p-4 fieldset block">
         <Input
           label="Name"
           placeholder="Write your name"
