@@ -11,8 +11,8 @@ const WebIntro = () => {
   return (
     <div className="mt-10 mb-18 min-h-[80vh] g-gradient-to-br from-indigo-50 via-white to-purple-100 text-gray-700 px-6 md:px-12 py-10 flex flex-col items-center justify-center font-sans relative overflow-hidden rounded-2xl">
       {/* Animated Background Effects */}
-      <div className="absolute w-80 h-80 bg-purple-300 rounded-full blur-3xl opacity-20 top-0 -left-10 animate-pulse"></div>
-      <div className="absolute w-80 h-80 bg-indigo-300 rounded-full blur-3xl opacity-20 bottom-0 -right-10 animate-pulse"></div>
+      {/* <div className="absolute w-80 h-80 bg-purple-300 rounded-full blur-3xl opacity-20 top-0 -left-10 animate-pulse"></div> */}
+      {/* <div className="absolute w-80 h-80 bg-indigo-300 rounded-full blur-3xl opacity-20 bottom-0 -right-10 animate-pulse"></div> */}
 
       {/* Intro Title */}
       <h1 className="text-5xl md:text-6xl font-extrabold text-center text-indigo-700 mb-6 animate-fade-down">

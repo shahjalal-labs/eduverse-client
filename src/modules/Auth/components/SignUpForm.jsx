@@ -58,16 +58,16 @@ const SignUpForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex-1 bg-base-200 border-base-300 border rounded-box   w-fit   p-4"
+      className="flex-1 bg-base-200 rounded-box  p-4 "
     >
       <h2 className="text-gray-500 text-2xl text-center font-bold">
         Sign Up Now
       </h2>
-      <fieldset className="w-xs p-4 fieldset">
+      <fieldset className="w-full  p-4 fieldset order ">
         <Input
           label="Name"
           placeholder="Write your name"
-          className="mb-2 w-full sm:min-w-[400px] input-info rounded-full"
+          className="mb-2  w-full sm:min-w-[400px] input-info rounded-full"
           name="name"
           required
           minLength={3}

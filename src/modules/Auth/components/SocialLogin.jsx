@@ -30,7 +30,7 @@ const SocialLogin = () => {
   return (
     <div>
       <div className="divider mt-5">Or continue with</div>
-      <div className="flex justify-center gap-3 *:btn-accen *:rounded-full gap-5">
+      <div className="flex flex-col sm:flex-row justify-center gap-3 *:btn-accen *:rounded-full gap-5">
         {/* <Button>Google</Button> */}
         <button
           className="btn bg-white text-black border-[#e5e5e5]"
