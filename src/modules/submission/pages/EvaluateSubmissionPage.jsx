@@ -43,9 +43,9 @@ const EvaluateSubmissionPage = () => {
           title: "✅ Success",
           text: "Evaluation submitted successfully!",
         });
-        // assignment/submit/
+        // assignment/pending/
         setTimeout(() => {
-          navigate(`/assignment/my-submit`);
+          navigate(`/assignments/pending`);
         }, 2000);
       }
     } catch (err) {
