@@ -11,7 +11,7 @@ const AssignmentDetailsCard = ({ assignmentDetails }) => {
       initial={{ opacity: 0, scale: 0.85 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="max-w-4xl w-full  rounded-3xl shadow-2xl hover:shadow-4xl hover:scale-[1.03] transition-transform duration-300 cursor-pointer px-8 py-4"
+      className="max-w-4xl w-full  rounded-3xl shadow-xl hover:shadow-4xl hover:scale-[1.03] transition-transform duration-300 cursor-pointer sm:px-8 px-4 py-4"
     >
       {/* Thumbnail */}
       <div className="overflow-hidden rounded-2xl shadow-lg mb-6">
@@ -24,7 +24,7 @@ const AssignmentDetailsCard = ({ assignmentDetails }) => {
       </div>
 
       {/* Title */}
-      <h1 className="text-3xl max-sm:text-3xl font-semibold mb-4 tracking-tight text-gray-500 drop-shadow-sm">
+      <h1 className="text-3xl max-sm:text-xl text-purple-400 font-semibold mb-4 tracking-tight text-gray-500 drop-shadow-sm">
         {assignmentDetails?.title}
       </h1>
 
@@ -49,9 +49,9 @@ const AssignmentDetailsCard = ({ assignmentDetails }) => {
           </span>
         </div>
 
-        <div className="badge badge-accent px-4 py-3 font-semibold shadow-md cursor-default select-none">
+        <div className="badge badge-accent px-4 py-[2px] font-semibold shadow-md cursor-default select-none h-fit">
           Due Date:{" "}
-          <span className="ml-2">
+          <span className="ml-2 ">
             {new Date(assignmentDetails?.dueDate).toLocaleDateString(
               undefined,
               {
@@ -71,7 +71,7 @@ const AssignmentDetailsCard = ({ assignmentDetails }) => {
       <div className="flex-center mt-7 mb-4">
         <Link
           to={`/assignment/submit/${assignmentDetails?._id}`}
-          className="btn bnt-active btn-wide btn-info"
+          className="btn btn-outline btn-wide btn-info rounded-full "
         >
           Take Assignment
         </Link>

@@ -50,7 +50,7 @@ const EvaluateSumissionForm = (props) => {
 
         {/* Submit Button */}
         <div className="text-right">
-          <button className="btn btn-primary hover:scale-105 transition-transform duration-200">
+          <button className="btn rounded-full btn-outline btn-primary hover:scale-105 transition-transform duration-200">
             ✅ Submit Evaluation
           </button>
         </div>

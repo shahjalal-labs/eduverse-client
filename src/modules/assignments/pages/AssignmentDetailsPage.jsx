@@ -32,7 +32,7 @@ const AssignmentDetailsPage = () => {
 
   if (isSuccess) {
     return (
-      <div className="sm:min-h-[80vh] flex items-center justify-center p-6 m-2 rounded">
+      <div className="sm:min-h-[80vh] flex items-center justify-center sm:p-6 m-2 rounded">
         <UseHelmet title="AssignmentDetails" />
         <AssignmentDetailsCard assignmentDetails={assignmentDetails} />
       </div>

@@ -22,12 +22,10 @@ const CreateAssignmentForm = (props) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="rounded-2xl shadow-2xl p-8 space-y-6 animate-fade-in-up"
+      className="rounded-2xl shadow-2xl sm:p-8 p-3 space-y-2 animate-fade-in-up"
     >
       <div>
-        <label className="block text-lg font-semibold text-gray-700 mb-2">
-          Title
-        </label>
+        <label className="block sm:text-lg  font-semibold text-gray-700 mb-2">Title</label>
         <input
           type="text"
           placeholder="Enter assignment title"
@@ -60,7 +58,7 @@ const CreateAssignmentForm = (props) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-lg font-semibold text-gray-700 mb-2">
+          <label className="block sm:text-lg font-semibold text-gray-700 mb-2">
             Marks
           </label>
           <input
@@ -75,7 +73,7 @@ const CreateAssignmentForm = (props) => {
         </div>
 
         <div>
-          <label className="block text-lg font-semibold text-gray-700 mb-2">
+          <label className="block sm:text-lg font-semibold text-gray-700 mb-2">
             Thumbnail Image URL
           </label>
           <input
@@ -94,7 +92,7 @@ const CreateAssignmentForm = (props) => {
         </div>
 
         <div>
-          <label className="block text-lg font-semibold text-gray-700 mb-2">
+          <label className="block sm:text-lg font-semibold text-gray-700 mb-2">
             Difficulty Level
           </label>
           <select
@@ -118,7 +116,7 @@ const CreateAssignmentForm = (props) => {
         </div>
 
         <div>
-          <label className="block text-lg font-semibold text-gray-700 mb-2">
+          <label className="block sm:text-lg font-semibold text-gray-700 mb-2">
             Due Date
           </label>
           <DatePicker

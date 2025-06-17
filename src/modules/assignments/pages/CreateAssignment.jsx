@@ -10,6 +10,8 @@ import { bottomToTop } from "../../../animation/motion";
 import { motion } from "motion/react";
 import CreateAssignmentForm from "../components/CreateAssignmentForm";
 import UseHelmet from "../../../hooks/useHelmet";
+import LottieAnimation from "../../../animation/LottieAnimation";
+import { createLottie } from "../../../animation";
 
 const CreateAssignment = () => {
   const navigate = useNavigate();
@@ -55,15 +57,18 @@ const CreateAssignment = () => {
 
   return (
     <motion.div
-      className="max-w-4xl mx-auto px-6 py-16 font-sans"
+      className="max-w-4xl mx-auto sm:px-6 px-2 py-10 font-sans"
       {...bottomToTop}
     >
       <UseHelmet title="Create Assignment" />
+      <div className="w-xs mx-auto w-fit mt-[-95px]">
+        <LottieAnimation anime={createLottie} />
+      </div>
       <div className="text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4 animate-fade-in">
+        <h1 className="sm:text-3xl md:text-4xl text-xl font-bold text-primary mb-4 animate-fade-in mt-[-30px]">
           Create a New Assignment ✍️
         </h1>
-        <p className="text-md text-gray-500 animate-fade-in delay-100">
+        <p className="sm:text-lg text-sm text-gray-500 animate-fade-in delay-100">
           Fill out the form below to share a new learning challenge with your
           peers.
         </p>

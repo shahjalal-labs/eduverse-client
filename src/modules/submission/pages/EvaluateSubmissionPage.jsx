@@ -1,13 +1,15 @@
 import { useForm } from "react-hook-form";
-import Swal from "sweetalert2";
+import  UseHelemt from "../../../hooks/useHelmet";
 import EvaluateSumissionForm from "../components/evaluateSubmission/EvaluateSumissionForm";
 import useAuth from "../../../hooks/useAuth";
 import updateData from "../../../utils/updateData";
 import { useLoaderData, useNavigate, useParams } from "react-router";
 import EvaluateSubmissionText from "../components/evaluateSubmission/EvaluateSubmissionText";
 import customAlert from "../../../utils/customAlert";
-import ErrorMessage from "../../../utils/ErrorMessage";
 import { useState } from "react";
+import LottieAnimation from "../../../animation/LottieAnimation";
+import { evaluateLottie } from "../../../animation";
+import EvaluateSubmissionPageIntro from "../components/evaluateSubmission/EvaluateSubmissionPageIntro";
 
 const EvaluateSubmissionPage = () => {
   const navigate = useNavigate();
@@ -60,18 +62,26 @@ const EvaluateSubmissionPage = () => {
   };
 
   return (
-    <section className="max-w-2xl mx-auto  rounded-xl shadow-lg p-6 mt-10 space-y-6">
-      <h2 className="text-2xl font-bold text-center text-primary">
-        Evaluate Submission
-      </h2>
-      <EvaluateSubmissionText submissionData={submissionData} />
-      {/* form */}
-      {/* handleSubmit, register, errors, onSubmit */}
-      <EvaluateSumissionForm
-        onSubmit={handleSubmit(onSubmit)}
-        register={register}
-        errors={errors}
-      />
+    <section className="min-h-[70vh] flex items-center  rounded-xl shadow-lg p-6 my-10 ">
+      <UseHelemt title="Evaluate Submission" />
+      <div className="w-full">
+        <EvaluateSubmissionPageIntro />
+        <div className="lg:flex justify-between order gap-7 ">
+          <div className="max-w-2xl mx-auto ">
+            <EvaluateSubmissionText submissionData={submissionData} />
+            {/* form */}
+            {/* handleSubmit, register, errors, onSubmit */}
+            <EvaluateSumissionForm
+              onSubmit={handleSubmit(onSubmit)}
+              register={register}
+              errors={errors}
+            />
+          </div>
+          <div className="max-w-2xl mx-auto max-lg:mt-5 ">
+            <LottieAnimation anime={evaluateLottie} />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
