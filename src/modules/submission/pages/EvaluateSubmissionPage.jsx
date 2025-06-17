@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import  UseHelemt from "../../../hooks/useHelmet";
+import UseHelemt from "../../../hooks/useHelmet";
 import EvaluateSumissionForm from "../components/evaluateSubmission/EvaluateSumissionForm";
 import useAuth from "../../../hooks/useAuth";
 import updateData from "../../../utils/updateData";
@@ -57,6 +57,7 @@ const EvaluateSubmissionPage = () => {
         title: "⚠️ Opps! Error occured!",
         text: err?.response?.data?.message,
         timer: 3000,
+        icon: "error",
       });
     }
   };
