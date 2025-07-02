@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="navbar bg-base-100 shadow-sm z-10 sticky top-[1px]"
+      className="navbar bg-base-100 shadow-sm z-10 sticky top-[1px] max-container"
       {...topToBottom}
     >
       <NavbarStart />
