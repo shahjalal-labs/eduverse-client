@@ -95,7 +95,7 @@ const WebIntro = () => {
       {/* CTA Button */}
       <Link
         to="/assignments"
-        className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold px-8 py-4 rounded-full shadow-md transition-transform hover:scale-105 duration-300 flex items-center gap-2 text-lg animate-fade-in-up"
+        className="bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-800 hover:to-cyan-400 text-white font-bold px-8 py-4 rounded-full shadow-md transition-transform hover:scale-105 duration-300 flex items-center gap-2 text-lg animate-fade-in-up"
       >
         🚀 Enter EduVerse <FaArrowRight />
       </Link>

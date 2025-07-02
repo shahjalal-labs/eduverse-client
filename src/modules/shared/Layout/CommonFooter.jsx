@@ -4,7 +4,7 @@ import FooterSocialIcons from "./FooterSocialIcons";
 const CommonFooter = () => {
   return (
     <div className="max-container">
-      <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+      <footer className="footer sm:footer-horizontal bg-base-200 text-base-content py-10 px-5">
         <nav>
           <h6 className="footer-title">Company</h6>
           <Link to="/about-us" className="link link-hover">
