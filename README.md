@@ -228,17 +228,71 @@ See the [LICENSE](LICENSE) file for full license details.
 
 ## 🖼️ Project Preview
 
-| Page                                   | Screenshot                                                                  |
-| -------------------------------------- | --------------------------------------------------------------------------- |
-| **Homepage**                           | ![Homepage](src/assets/preview/DesktopHomepage.png)                         |
-| **Assignments List**                   | ![Assignments List](src/assets/preview/DesktopAssignmentspage.png)          |
-| **Create Assignment**                  | ![Create Assignment](src/assets/preview/DesktopCreateAssignmentpage.png)    |
-| **Pending Assignments for Evaluation** | ![Pending Assignments](src/assets/preview/DesktopAssginmentPendingpage.png) |
-| **Submit Assignment**                  | _(Screenshot coming soon)_                                                  |
-| **Evaluate Submission**                | ![Evaluate Submission](src/assets/preview/DesktoEvaluateSubmissionpage.png) |
-| **My Submitted Assignments**           | ![My Submitted Assignments](src/assets/preview/DesktopSubmittedPage.png)    |
+### Homepage
+
+![Homepage](src/assets/preview/DesktopHomepage.png)
 
 ---
+
+### Assignments List
+
+![Assignments List](src/assets/preview/DesktopAssignmentspage.png)
+
+---
+
+### Create Assignment
+
+![Create Assignment](src/assets/preview/DesktopCreateAssignmentpage.png)
+
+---
+
+### Pending Assignments for Evaluation
+
+![Pending Assignments](src/assets/preview/DesktopAssginmentPendingpage.png)
+
+---
+
+### Submit Assignment
+
+_(Screenshot coming soon)_
+
+---
+
+### Evaluate Submission
+
+![Evaluate Submission](src/assets/preview/DesktoEvaluateSubmissionpage.png)
+
+---
+
+### My Submitted Assignments
+
+![My Submitted Assignments](src/assets/preview/DesktopSubmittedPage.png)
+
+---
+
+### 📱 Mobile View
+
+#### Homepage
+
+![Mobile Homepage](src/assets/preview/mobile/homepage.png)
+
+---
+
+#### Assignments List
+
+![Mobile Assignments List](src/assets/preview/mobile/AssignmentsPage.png)
+
+---
+
+#### Create Assignment
+
+![Mobile Create Assignment](src/assets/preview/mobile/createAssignment.png)
+
+---
+
+#### Evaluate Submission
+
+![Mobile Evaluate Submission](src/assets/preview/mobile/evaluateAssignment.png)
 
 ### 🔗 Live Interactive Demo
 

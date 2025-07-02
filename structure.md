@@ -8,7 +8,9 @@
 ├── package.json
 ├── public
 │   └── CNAME
+├── readmeGenerate.md
 ├── README.md
+├── READMEPrev.md
 ├── src
 │   ├── animation
 │   │   ├── auth-lottie.json
@@ -27,23 +29,35 @@
 │   │   └── update-man-lottie.json
 │   ├── App.jsx
 │   ├── assets
-│   │   └── images
-│   │       ├── assignments
-│   │       │   ├── ai.jpg
-│   │       │   ├── backendserver.jpg
-│   │       │   ├── developerpuzzles.jpg
-│   │       │   └── weatherapp.jpg
-│   │       ├── banner1.jpg
-│   │       ├── banner2.jpg
-│   │       ├── banner3.jpg
-│   │       ├── banner4.jpg
-│   │       ├── banner5.jpg
-│   │       ├── banner6.jpg
-│   │       ├── banner7.jpg
-│   │       ├── index.js
-│   │       ├── jobseeker1.jpg
-│   │       ├── jobseeker2.jpg
-│   │       └── notfound3.jpg
+│   │   ├── images
+│   │   │   ├── assignments
+│   │   │   │   ├── ai.jpg
+│   │   │   │   ├── backendserver.jpg
+│   │   │   │   ├── developerpuzzles.jpg
+│   │   │   │   └── weatherapp.jpg
+│   │   │   ├── banner1.jpg
+│   │   │   ├── banner2.jpg
+│   │   │   ├── banner3.jpg
+│   │   │   ├── banner4.jpg
+│   │   │   ├── banner5.jpg
+│   │   │   ├── banner6.jpg
+│   │   │   ├── banner7.jpg
+│   │   │   ├── index.js
+│   │   │   ├── jobseeker1.jpg
+│   │   │   ├── jobseeker2.jpg
+│   │   │   └── notfound3.jpg
+│   │   └── preview
+│   │       ├── DesktoEvaluateSubmissionpage.png
+│   │       ├── DesktopAssginmentPendingpage.png
+│   │       ├── DesktopAssignmentspage.png
+│   │       ├── DesktopCreateAssignmentpage.png
+│   │       ├── DesktopHomepage.png
+│   │       ├── DesktopSubmittedPage.png
+│   │       └── mobile
+│   │           ├── AssignmentsPage.png
+│   │           ├── createAssignment.png
+│   │           ├── evaluateAssignment.png
+│   │           └── homepage.png
 │   ├── contexts
 │   │   └── AuthContext
 │   │       ├── AuthContext.jsx
@@ -120,6 +134,8 @@
 │   │   │   │   │   └── TermsCondition.jsx
 │   │   │   │   ├── FooterSocialIcons.jsx
 │   │   │   │   ├── index.js
+│   │   │   │   ├── nav
+│   │   │   │   │   └── NavbarStart.jsx
 │   │   │   │   ├── NavbarDrawer.jsx
 │   │   │   │   ├── Navbar.jsx
 │   │   │   │   ├── navbarLinksConstant.jsx
@@ -191,6 +207,6 @@
 ├── structure.md
 └── vite.config.js
 
-47 directories, 142 files
+50 directories, 155 files
 
 ```
