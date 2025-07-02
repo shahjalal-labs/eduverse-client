@@ -10,7 +10,7 @@
 | ------------------------ | -------------------------------------------------------------------------- |
 | 🔗 Live Client           | [https://edu-verse.surge.sh/](https://edu-verse.surge.sh/)                 |
 | 🔗 Live Server           | [https://eduverse-server.vercel.app/](https://eduverse-server.vercel.app/) |
-| 📦 Client Source Code    | [GitHub Repo](https://github.com/shahjalal-labs/client-EduVerse-withjwt)   |
+| 📦 Client Source Code    | [GitHub Repo](https://github.com/shahjalal-labs/eduverse-client)   |
 | 📦 Server Source Code    | [GitHub Repo](https://github.com/shahjalal-labs/server-EduVerse-withjwt)   |
 | 🌐 Portfolio Live        | [http://shahjalal-mern.surge.sh/](http://shahjalal-mern.surge.sh/)         |
 | 📁 Portfolio Source Code | [GitHub Repo](https://github.com/shahjalal-labs/shahjalal-portfolio)       |
@@ -81,7 +81,7 @@ EduVerse empowers students to:
 
 ```bash
 # Clone the repository
-git clone https://github.com/shahjalal-labs/client-EduVerse-withjwt.git
+git clone https://github.com/shahjalal-labs/eduverse-client.git
 cd client-EduVerse-withjwt
 
 # Install dependencies
@@ -299,3 +299,38 @@ _(Screenshot coming soon)_
 For the full interactive experience, real-time data, and latest features, please visit the live site:
 
 👉 [https://edu-verse.surge.sh/](https://edu-verse.surge.sh/)
+
+## ❓ FAQ
+
+### Q: How do I reset my password if I forget it?
+
+A: Use the "Forgot Password" link on the sign-in page to receive a password reset email.
+
+### Q: Can I evaluate my own submissions?
+
+A: No, the platform restricts peer evaluation to submissions from other users only.
+
+### Q: What browsers are supported?
+
+A: EduVerse supports all modern browsers including Chrome, Firefox, Edge, and Safari.
+
+### Q: How do I contribute to the project?
+
+A: Fork the repo, create a feature branch, make your changes, and submit a pull request. Please refer to the [Contributing](#🤝-contributing) section.
+
+### Q: Who do I contact if I encounter a bug or issue?
+
+A: Please open an issue on the GitHub repository or contact the developer via the support channels listed below.
+
+---
+
+## 📞 Contact & Support
+
+For questions, bug reports, or feature requests, please use the following channels:
+
+- **GitHub Issues:** [https://github.com/shahjalal-labs/eduverse-client/issues](https://github.com/shahjalal-labs/eduverse-client/issues)
+- **Email:** shahjalal.support@example.com
+- **Discord:** [EduVerse Community Discord](https://discord.gg/your-discord-invite)
+- **Slack:** [EduVerse Workspace](https://your-slack-workspace-link)
+
+Please include as much detail as possible when reporting issues to help us resolve them quickly.
