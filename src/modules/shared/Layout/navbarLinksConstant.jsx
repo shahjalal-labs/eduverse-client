@@ -1,35 +1,32 @@
 import { Link } from "react-router";
 import useAuth from "../../../hooks/useAuth";
-import { AuthContext } from "../../../contexts/AuthContext/AuthContext";
+const NavbarLinks = () => {
+  const { user } = useAuth();
 
-export const navItems = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "Assignments",
-    path: "/assignments",
-  },
-  {
-    name: "About Us",
-    path: "/about-us",
-  },
-  {
-    name: "Pending Assignments",
-    path: "/assignments/pending",
-  },
-];
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Assignments", path: "/assignments" },
+    { name: "About Us", path: "/about-us" },
+    // Conditionally add this only if user exists
+    ...(user
+      ? [{ name: "Pending Assignments", path: "/assignments/pending" }]
+      : []),
+  ];
 
-const navbarLinks = () => {
-  const user = useAuth(AuthContext);
-  return navItems.map((item) => {
-    return (
-      <li key={item.path}>
-        <Link to={item.path}>{item.name}</Link>
-      </li>
-    );
-  });
+  return (
+    <>
+      {navItems.map((item) => (
+        <li key={item.path}>
+          <Link
+            to={item.path}
+            className="hover:text-primary transition-colors duration-200"
+          >
+            {item.name}
+          </Link>
+        </li>
+      ))}
+    </>
+  );
 };
 
-export default navbarLinks;
+export default NavbarLinks;

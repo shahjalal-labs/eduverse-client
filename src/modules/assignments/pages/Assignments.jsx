@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import ErrorMessage from "../../../utils/ErrorMessage";
 import Spinner from "../../shared/Layout/Spinner";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchData } from "../../../utils/fetchData";
 import AssignmentCard from "../components/AssignmentCard";
@@ -13,6 +13,7 @@ const Assignments = () => {
   const [assignments, setAssignments] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [difficulty, setDifficulty] = useState("");
+  const [sortBy, setSortBy] = useState("title-asc"); // default sorting
 
   const {
     data: myPostedJobs,
@@ -37,18 +38,76 @@ const Assignments = () => {
     }
   }, [myPostedJobs, isSuccess]);
 
+  // Memoized sorted assignments
+  const sortedAssignments = useMemo(() => {
+    if (!assignments) return [];
+
+    const sorted = [...assignments];
+
+    switch (sortBy) {
+      case "title-asc":
+        sorted.sort((a, b) => a.title.localeCompare(b.title));
+        break;
+      case "title-desc":
+        sorted.sort((a, b) => b.title.localeCompare(a.title));
+        break;
+      case "difficulty-asc":
+        sorted.sort((a, b) => a.difficulty.localeCompare(b.difficulty));
+        break;
+      case "difficulty-desc":
+        sorted.sort((a, b) => b.difficulty.localeCompare(a.difficulty));
+        break;
+      case "dueDate-asc":
+        sorted.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+        break;
+      case "dueDate-desc":
+        sorted.sort((a, b) => new Date(b.dueDate) - new Date(a.dueDate));
+        break;
+      default:
+        break;
+    }
+    return sorted;
+  }, [assignments, sortBy]);
+
   return (
     <div className="px-4 py-10 max-w-7xl mx-auto">
       <UseHelmet title="Assignments" />
       <AssignmentsPageIntro />
-      {/* Filter & Search Controls */}
-      <FilterSearch
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        difficulty={difficulty}
-        setDifficulty={setDifficulty}
-        refetch={refetch}
-      />
+
+      {/* Filter & Search & Sort Controls */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+        <FilterSearch
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          difficulty={difficulty}
+          setDifficulty={setDifficulty}
+          refetch={refetch}
+        />
+
+        {/* Sorting dropdown */}
+        <div>
+          <label
+            htmlFor="sort-select"
+            className="mr-2 font-medium text-gray-700"
+          >
+            Sort by:
+          </label>
+          <select
+            id="sort-select"
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            <option value="title-asc">Title (A-Z)</option>
+            <option value="title-desc">Title (Z-A)</option>
+            <option value="difficulty-asc">Difficulty (Low to High)</option>
+            <option value="difficulty-desc">Difficulty (High to Low)</option>
+            <option value="dueDate-asc">Due Date (Earliest)</option>
+            <option value="dueDate-desc">Due Date (Latest)</option>
+          </select>
+        </div>
+      </div>
+
       {/* Status */}
       {isError && <ErrorMessage error={error} />}
       {isPending && <Spinner />}
@@ -56,7 +115,7 @@ const Assignments = () => {
       {/* Assignments Grid */}
       {isSuccess && (
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 "
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="hidden"
           animate="visible"
           variants={{
@@ -68,8 +127,8 @@ const Assignments = () => {
             },
           }}
         >
-          {assignments.length > 0 ? (
-            assignments.map((assignment) => (
+          {sortedAssignments.length > 0 ? (
+            sortedAssignments.map((assignment) => (
               <AssignmentCard
                 key={assignment._id}
                 assignment={assignment}
