@@ -1,9 +1,8 @@
 import { motion } from "motion/react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import { topToBottom } from "../../../animation/motion";
 import useAuth from "../../../hooks/useAuth";
 import Signout from "../../Auth/components/Signout";
-import Brand from "../ui/Brand";
 import Avatar from "../ui/Avatar";
 import navbarLinks from "./navbarLinksConstant";
 import DropDown from "../ui/DropDown";

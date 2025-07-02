@@ -18,7 +18,7 @@ const AboutUs = () => {
         transition={{ duration: 0.8 }}
         className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8"
       >
-        🚀 Welcome to <span className="text-cyan-400">EduVerse</span>
+        🚀 What to know about <span className="text-cyan-400">EduVerse</span>
       </motion.h1>
 
       {/* Description */}

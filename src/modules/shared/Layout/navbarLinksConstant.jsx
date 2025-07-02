@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import useAuth from "../../../hooks/useAuth";
+import { AuthContext } from "../../../contexts/AuthContext/AuthContext";
 
 export const navItems = [
   {
@@ -20,6 +22,7 @@ export const navItems = [
 ];
 
 const navbarLinks = () => {
+  const user = useAuth(AuthContext);
   return navItems.map((item) => {
     return (
       <li key={item.path}>

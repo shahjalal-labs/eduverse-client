@@ -33,7 +33,8 @@ const CommonFooter = () => {
           </Link>
           <Link
             target="_blank"
-            href="https://github.com/shahjalal-labs/eduverse-client"
+            to="https://github.com/shahjalal-labs/eduverse-client"
+            rel="noreferrer"
           >
             Source code
           </Link>
