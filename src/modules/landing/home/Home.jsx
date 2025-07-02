@@ -12,9 +12,9 @@ const Home = () => {
       <UseHelmet title="Home" />
       <Banner />
       <WebIntro />
-      <AboutUs />
       <Features />
       <FAQ />
+      <AboutUs />
       <ContactUs />
     </div>
   );

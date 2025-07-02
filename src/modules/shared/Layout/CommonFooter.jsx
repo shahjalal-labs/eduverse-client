@@ -31,6 +31,12 @@ const CommonFooter = () => {
           <Link to="/cookie-policy" className="link link-hover">
             Cookie policy
           </Link>
+          <Link
+            target="_blank"
+            href="https://github.com/shahjalal-labs/eduverse-client"
+          >
+            Source code
+          </Link>
         </nav>
       </footer>
       <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">

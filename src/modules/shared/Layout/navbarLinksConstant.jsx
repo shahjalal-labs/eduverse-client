@@ -10,6 +10,10 @@ export const navItems = [
     path: "/assignments",
   },
   {
+    name: "About Us",
+    path: "/about-us",
+  },
+  {
     name: "Pending Assignments",
     path: "/assignments/pending",
   },
