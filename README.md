@@ -1,8 +1,8 @@
-# 🚀 EduVerse – Online Group Study & Assignment Portal
+🚀 EduVerse – Online Group Study & Assignment Portal
 
 EduVerse is a **MERN-based**, fully authenticated, and interactive assignment submission platform designed for students and groups. With **modern UI/UX**, EduVerse enables students to **collaborate**, **submit**, and **evaluate** assignments seamlessly.
 
----
+--
 
 ## 🌐 Live Site
 
@@ -356,9 +356,8 @@ MIT License – © 2025 Md. Shahjalal
 
 >
 
-`````
-
 ```
+
 client github: https://github.com/Programming-Hero-Web-Course4/b11a11-client-side-shahjalal-labs
 
 server github: https://github.com/Programming-Hero-Web-Course4/b11a11-server-side-shahjalal-labs
@@ -367,5 +366,4 @@ live site client: https://edu-verse.surge.sh
 
 live site server: https://server-edu-verse.vercel.app
 
-````
-`````
+```
