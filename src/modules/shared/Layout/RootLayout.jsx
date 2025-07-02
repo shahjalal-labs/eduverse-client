@@ -13,6 +13,8 @@ const RootLayout = () => {
         <div className="min-h-[60vh] sm:px-3 px-2">
           <Outlet />
         </div>
+      </div>
+      <div className="bg-base-200 text-base-content ">
         <CommonFooter />
       </div>
     </>

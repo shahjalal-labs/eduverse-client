@@ -12,10 +12,7 @@ const Navbar = () => {
   const { user } = useAuth();
 
   return (
-    <motion.nav
-      className="navbar bg-base-100 shadow-sm z-10 sticky top-[1px] max-container"
-      {...topToBottom}
-    >
+    <motion.nav className="navbar  max-container" {...topToBottom}>
       <NavbarStart />
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navbarLinks()}</ul>
