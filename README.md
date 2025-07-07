@@ -10,7 +10,7 @@
 | ------------------------ | -------------------------------------------------------------------------- |
 | 🔗 Live Client           | [https://edu-verse.surge.sh/](https://edu-verse.surge.sh/)                 |
 | 🔗 Live Server           | [https://eduverse-server.vercel.app/](https://eduverse-server.vercel.app/) |
-| 📦 Client Source Code    | [GitHub Repo](https://github.com/shahjalal-labs/eduverse-client)   |
+| 📦 Client Source Code    | [GitHub Repo](https://github.com/shahjalal-labs/eduverse-client)           |
 | 📦 Server Source Code    | [GitHub Repo](https://github.com/shahjalal-labs/server-EduVerse-withjwt)   |
 | 🌐 Portfolio Live        | [http://shahjalal-mern.surge.sh/](http://shahjalal-mern.surge.sh/)         |
 | 📁 Portfolio Source Code | [GitHub Repo](https://github.com/shahjalal-labs/shahjalal-portfolio)       |
@@ -334,3 +334,7 @@ For questions, bug reports, or feature requests, please use the following channe
 - **Slack:** [EduVerse Workspace](https://your-slack-workspace-link)
 
 Please include as much detail as possible when reporting issues to help us resolve them quickly.
+
+## 🚀 Developer Info:
+
+![Developer Info:](https://i.ibb.co/kVR4YmrX/developer-Info-Github-Banner.png)
