@@ -40,8 +40,7 @@ const Navbar = () => {
 };
 
 export default Navbar; */
-
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Link } from "react-router";
 import { topToBottom } from "../../../animation/motion";
 import useAuth from "../../../hooks/useAuth";
@@ -56,79 +55,183 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="
-        navbar
-        max-container
-        bg-gradient-to-r from-[#0a0a1f] via-[#1c1c3a] to-[#0a0a1f]
-        border-b border-purple-700/40
-        backdrop-blur-sm
-        sticky top-0 z-50
-        px-6 py-0
-        flex items-center justify-between
-        shadow-[0_0_8px_rgba(168,85,247,0.3)]
-      "
+      className="navbar max-container relative bg-gradient-to-r from-gray-900 via-gray-800 to-black backdrop-blur-xl border-b border-cyan-500/30 shadow-[0_0_30px_rgba(6,182,212,0.2)] group hover:shadow-[0_0_50px_rgba(6,182,212,0.4)] transition-all duration-500"
       {...topToBottom}
-      style={{ marginTop: 0, marginBottom: 0 }} // ensure no vertical margin from motion
     >
-      <NavbarStart />
+      {/* Animated top glow line */}
+      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-blue-500 to-transparent animate-pulse opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
 
-      <div className="navbar-center hidden lg:flex flex-1 justify-center">
-        <ul className="menu menu-horizontal px-1 text-gray-300 space-x-8">
-          {navbarLinks()}
-        </ul>
+      {/* CLI terminal prompt */}
+      <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-cyan-400 font-mono text-sm opacity-70 animate-pulse">
+        <span className="text-emerald-400">eduverse</span>
+        <span className="text-gray-500">@</span>
+        <span className="text-blue-400">terminal</span>
+        <span className="text-gray-400">:~$</span>
       </div>
 
-      <div className="navbar-end flex items-center gap-4">
+      <div className="ml-32">
+        <NavbarStart />
+      </div>
+
+      <div className="navbar-center hidden lg:flex">
+        <motion.ul
+          className="menu menu-horizontal px-1 space-x-1"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, staggerChildren: 0.1 }}
+        >
+          {navbarLinks().map((link, index) => (
+            <motion.li
+              key={index}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 + index * 0.1 }}
+              className="relative group/item"
+            >
+              <div className="px-4 py-2 rounded-lg relative overflow-hidden transition-all duration-300 hover:bg-gradient-to-r hover:from-cyan-500/10 hover:via-blue-500/10 hover:to-violet-500/10 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] border border-transparent hover:border-cyan-500/30">
+                {/* Animated background sweep */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/20 via-blue-500/20 to-violet-500/0 translate-x-[-200%] group-hover/item:translate-x-[200%] transition-transform duration-700 ease-out" />
+
+                {/* Content */}
+                <div className="relative z-10">{link}</div>
+
+                {/* Active indicator */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-blue-400 group-hover/item:w-full transition-all duration-300 rounded-full" />
+
+                {/* Corner glow dots */}
+                <div className="absolute top-1 right-1 w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover/item:opacity-100 animate-ping transition-opacity duration-300" />
+                <div className="absolute top-1 right-1 w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
+              </div>
+            </motion.li>
+          ))}
+        </motion.ul>
+      </div>
+
+      <div className="navbar-end">
         {user ? (
-          <>
-            <DropDown>
-              <Avatar
-                className="
-                  border border-purple-600
-                  hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.6)]
-                  transition-shadow duration-300
-                  rounded-full
-                  cursor-pointer
-                "
-              />
-            </DropDown>
-            <Signout>
-              <button
-                className="
-                  btn btn-primary btn-soft
-                  bg-gradient-to-r from-purple-700 to-purple-900
-                  hover:from-purple-800 hover:to-purple-950
-                  text-white
-                  shadow-sm
-                  rounded-full
-                  px-5 py-2
-                  transition
-                  duration-300
-                "
-              >
-                Sign Out
-              </button>
-            </Signout>
-          </>
-        ) : (
-          <Link
-            to="/auth/signin"
-            className="
-              btn
-              bg-gradient-to-r from-purple-700 to-purple-900
-              hover:from-purple-800 hover:to-purple-950
-              text-white
-              shadow-sm
-              rounded-full
-              px-5 py-2
-              transition
-              duration-300
-            "
+          <motion.div
+            className="flex items-center gap-4"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
           >
-            Sign In
-          </Link>
+            {/* Status indicator */}
+            <div className="hidden sm:flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-gray-800/80 to-gray-900/80 rounded-full border border-emerald-500/40 shadow-[0_0_10px_rgba(16,185,129,0.3)] hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all duration-300">
+              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_6px_rgba(16,185,129,0.8)]" />
+              <span className="text-emerald-400 text-xs font-mono font-semibold">
+                ONLINE
+              </span>
+            </div>
+
+            <DropDown>
+              <div className="relative group/avatar cursor-pointer">
+                {/* Rotating ring effect */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 rounded-full opacity-40 group-hover/avatar:opacity-70 animate-spin-slow blur-sm transition-opacity duration-300" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-60 group-hover/avatar:opacity-90 animate-pulse transition-opacity duration-300" />
+
+                {/* Avatar */}
+                <div className="relative transform group-hover/avatar:scale-110 transition-transform duration-300">
+                  <Avatar />
+                </div>
+
+                {/* Floating particles around avatar */}
+                <div className="absolute -top-1 -right-1 w-1 h-1 bg-cyan-400 rounded-full animate-ping opacity-0 group-hover/avatar:opacity-100 transition-opacity duration-300" />
+                <div className="absolute -bottom-1 -left-1 w-1 h-1 bg-blue-400 rounded-full animate-ping animation-delay-[0.5s] opacity-0 group-hover/avatar:opacity-100 transition-opacity duration-300" />
+              </div>
+            </DropDown>
+
+            <Signout>
+              <motion.button
+                className="relative px-5 py-2 bg-gradient-to-r from-red-500/20 via-red-600/20 to-red-700/20 border border-red-500/50 rounded-lg text-red-400 font-mono font-semibold text-sm overflow-hidden group/btn hover:shadow-[0_0_25px_rgba(239,68,68,0.4)] transition-all duration-300 hover:border-red-400/70"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {/* Animated warning sweep */}
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-400/30 to-red-500/0 translate-x-[-200%] group-hover/btn:translate-x-[200%] transition-transform duration-600" />
+
+                <span className="relative flex items-center gap-2">
+                  <span className="w-2 h-2 bg-red-400 rounded-full animate-pulse shadow-[0_0_4px_rgba(239,68,68,0.8)]" />
+                  LOGOUT
+                  <span className="text-red-300 animate-pulse">|</span>
+                </span>
+
+                {/* Danger indicators */}
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-red-400 rounded-full animate-ping opacity-50 group-hover/btn:opacity-80" />
+              </motion.button>
+            </Signout>
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <Link
+              to="/auth/signin"
+              className="relative px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-violet-500/20 border border-cyan-500/60 rounded-lg text-cyan-400 font-mono font-bold text-sm overflow-hidden group/signin hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] hover:border-cyan-400/80 transition-all duration-300"
+            >
+              {/* Animated login sweep */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-400/20 via-blue-400/20 to-violet-400/20 translate-x-[-200%] group-hover/signin:translate-x-[200%] transition-transform duration-700" />
+
+              <span className="relative flex items-center gap-2">
+                <span className="text-emerald-400 animate-pulse">$</span>
+                <span>SIGNIN</span>
+                <span className="text-blue-300 animate-pulse">|</span>
+              </span>
+
+              {/* Access granted indicators */}
+              <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-40 group-hover/signin:opacity-80" />
+              <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full opacity-60" />
+
+              {/* Side glow bars */}
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-[2px] h-0 bg-gradient-to-b from-cyan-400 to-blue-400 group-hover/signin:h-full transition-all duration-300 rounded-full" />
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-[2px] h-0 bg-gradient-to-b from-blue-400 to-violet-400 group-hover/signin:h-full transition-all duration-300 rounded-full" />
+            </Link>
+          </motion.div>
         )}
       </div>
+
+      {/* Bottom animated glow line */}
+      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500 via-violet-500 to-transparent opacity-40 group-hover:opacity-70 transition-opacity duration-500" />
+
+      {/* Floating matrix-style particles */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-gradient-to-b from-cyan-400 to-blue-400 rounded-full"
+            animate={{
+              x: [0, 150, 300],
+              y: [0, -30, 0],
+              opacity: [0, 1, 0],
+              scale: [0.5, 1, 0.5],
+            }}
+            transition={{
+              duration: 6 + i,
+              repeat: Infinity,
+              delay: i * 1.2,
+              ease: "easeInOut",
+            }}
+            style={{
+              left: `${10 + i * 20}%`,
+              top: "50%",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Scanning line effect */}
+      <motion.div
+        className="absolute top-0 left-0 w-[2px] h-full bg-gradient-to-b from-transparent via-cyan-400 to-transparent opacity-20"
+        animate={{
+          x: [0, "100vw"],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
     </motion.nav>
   );
 };
