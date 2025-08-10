@@ -8,9 +8,9 @@ const UpdateAssignmentIntro = ({ title, img }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 10 }}
     >
-      <div className="flex items-center gap-6 max-lg:hidden  max-lg:gap-5">
+      <div className="flex items-center gap-6   max-lg:gap-5">
         {/* Thumbnail with glow pulse */}
-        <div className="w-[180px]  rounded-lg overflow-hidden  lg:border border-purple-600 shadow-glow-purple animate-pulse-glow">
+        <div className="w-[180px] max-lg:hidden  rounded-lg overflow-hidden  lg:border border-purple-600 shadow-glow-purple animate-pulse-glow">
           <img
             src={img}
             alt={`Assignment: ${title}`}
