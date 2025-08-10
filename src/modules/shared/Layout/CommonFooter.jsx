@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+/* import { Link } from "react-router";
 import FooterSocialIcons from "./FooterSocialIcons";
 
 const CommonFooter = () => {
@@ -60,6 +60,128 @@ const CommonFooter = () => {
           </p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
+          <FooterSocialIcons />
+        </nav>
+      </footer>
+    </div>
+  );
+};
+
+export default CommonFooter; */
+
+import { Link } from "react-router-dom";
+import FooterSocialIcons from "./FooterSocialIcons";
+import { motion } from "framer-motion";
+
+const glowPulse = {
+  initial: { opacity: 0, y: 10 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+  whileHover: {
+    scale: 1.05,
+    textShadow:
+      "0 0 6px #4ade80, 0 0 10px #22c55e, 0 0 20px #16a34a, 0 0 40px #15803d",
+    transition: { duration: 0.3, yoyo: Infinity },
+  },
+};
+
+const CommonFooter = () => {
+  return (
+    <div className="max-container bg-black text-green-400 select-none">
+      <footer className="footer sm:footer-horizontal bg-[#0f111a] border-t border-green-900 text-green-400 py-12 px-8 rounded-lg shadow-lg shadow-green-900/50">
+        <motion.nav
+          className="flex flex-col gap-3"
+          initial="initial"
+          animate="animate"
+          whileHover="whileHover"
+          variants={glowPulse}
+        >
+          <h6 className="footer-title text-green-300 text-lg font-semibold mb-2 tracking-wide">
+            Company
+          </h6>
+          {[
+            { name: "About us", path: "/about-us" },
+            { name: "Contact", path: "/contact-us" },
+            { name: "Assignments", path: "/assignments" },
+            { name: "Home", path: "/" },
+          ].map(({ name, path }) => (
+            <Link
+              key={name}
+              to={path}
+              className="link link-hover hover:text-green-200 transition-colors duration-300"
+            >
+              {name}
+            </Link>
+          ))}
+        </motion.nav>
+
+        <motion.nav
+          className="flex flex-col gap-3"
+          initial="initial"
+          animate="animate"
+          whileHover="whileHover"
+          variants={glowPulse}
+        >
+          <h6 className="footer-title text-green-300 text-lg font-semibold mb-2 tracking-wide">
+            Legal
+          </h6>
+          {[
+            { name: "Terms of use", path: "/terms-condition" },
+            { name: "Privacy policy", path: "/privacy-policy" },
+            { name: "Cookie policy", path: "/cookie-policy" },
+          ].map(({ name, path }) => (
+            <Link
+              key={name}
+              to={path}
+              className="link link-hover hover:text-green-200 transition-colors duration-300"
+            >
+              {name}
+            </Link>
+          ))}
+          <a
+            href="https://github.com/shahjalal-labs/eduverse-client"
+            target="_blank"
+            rel="noreferrer"
+            className="link link-hover hover:text-green-200 transition-colors duration-300"
+          >
+            Source code
+          </a>
+        </motion.nav>
+      </footer>
+
+      <footer className="footer bg-[#0a0c12] text-green-400 border-t border-green-900 px-10 py-6 rounded-b-lg shadow-inner shadow-green-900/30 flex flex-col md:flex-row items-center justify-between gap-4">
+        <aside className="flex items-center gap-4">
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#22c55e"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="hover:animate-pulse"
+          >
+            <path d="M12 2L15 8l6 1-4.5 4.5L17 21l-5-3-5 3 1.5-7.5L2 9l6-1 3-6z" />
+          </motion.svg>
+          <motion.p
+            className="font-mono text-sm leading-tight"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            EduVerse <br />
+            <span className="text-green-300">
+              Sharpen the learning experience!!!
+            </span>
+          </motion.p>
+        </aside>
+
+        <nav>
           <FooterSocialIcons />
         </nav>
       </footer>
