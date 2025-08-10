@@ -12,8 +12,9 @@
 
 body {
   font-family: "Inter", sans-serif;
-  margin-top: 35px;
+  /* margin-top: 35px; */
   color: #6a7282;
+  background-color: #0f172a; /* slate-900 from Tailwind */
 }
 
 .max-container {
