@@ -22,7 +22,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navbarLinks()}</ul>
       </div>
 
-      <div className="navbar-end flex items-center gap-5">
+      {/* <div className="navbar-end flex items-center gap-5">
         {user ? (
           <>
             <DropDown>
@@ -41,6 +41,31 @@ const Navbar = () => {
           <Link
             to="/auth/signin"
             className="btn btn-outline text-[#4fd1ff] border-[#4fd1ff] hover:bg-[#4fd1ff] hover:text-[#121426] transition-all duration-300 shadow-[0_0_10px_#4fd1ff]"
+            aria-label="Sign In"
+          >
+            Sign In
+          </Link>
+        )}
+      </div> */}
+      <div className="navbar-end flex items-center gap-5">
+        {user ? (
+          <>
+            <DropDown>
+              <Avatar className="ring-2 ring-cyan-400/70 hover:ring-cyan-300/90 transition-all duration-700 animate-pulse" />
+            </DropDown>
+            <Signout>
+              <button
+                className="btn btn-outline text-cyan-400 border-cyan-400 bg-indigo-900/30 hover:bg-cyan-400 hover:text-indigo-900 transition-all duration-300 shadow-[0_0_15px_#22d3ee]"
+                aria-label="Sign Out"
+              >
+                Sign Out
+              </button>
+            </Signout>
+          </>
+        ) : (
+          <Link
+            to="/auth/signin"
+            className="btn btn-outline text-cyan-400 border-cyan-400 bg-indigo-900/30 hover:bg-cyan-400 hover:text-indigo-900 transition-all duration-300 shadow-[0_0_15px_#22d3ee]"
             aria-label="Sign In"
           >
             Sign In
