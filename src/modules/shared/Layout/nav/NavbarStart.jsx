@@ -36,38 +36,23 @@ const NavbarStart = () => {
 
 export default NavbarStart; */
 
-import { motion } from "framer-motion";
 import Brand from "../../ui/Brand";
 import navbarLinks from "../navbarLinksConstant";
-
-const dropdownVariants = {
-  hidden: { opacity: 0, y: -10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.25 } },
-};
-
-const iconVariants = {
-  rest: { filter: "drop-shadow(0 0 0 rgba(203,67,255,0))" },
-  hover: { filter: "drop-shadow(0 0 6px rgba(203,67,255,0.8))", scale: 1.1 },
-};
 
 const NavbarStart = () => {
   return (
     <div className="navbar-start">
       <div className="dropdown dropdown-right dropdown-hover relative">
-        <motion.div
+        {/* Hamburger icon: show only on max-lg */}
+        <div
           tabIndex={0}
           role="button"
-          className="lg:hidden cursor-pointer p-2 rounded-md text-purple-300 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-          initial="rest"
-          whileHover="hover"
-          whileFocus="hover"
-          animate="rest"
-          variants={iconVariants}
+          className="cursor-pointer p-2 rounded-md text-indigo-400 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-300 lg:hidden"
           aria-label="Open menu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
+            className="h-6 w-6 drop-shadow-[0_0_4px_rgba(129,140,248,0.7)] transition-shadow duration-300"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -77,18 +62,17 @@ const NavbarStart = () => {
           >
             <path d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
-        </motion.div>
-        <motion.ul
+        </div>
+
+        {/* Dropdown menu */}
+        <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content z-20 p-2 mt-6 min-w-[170px] rounded-lg bg-[#1a1a40]/80 backdrop-blur-md shadow-lg border border-purple-700"
-          initial="hidden"
-          whileHover="visible"
-          variants={dropdownVariants}
-          aria-label="Navigation menu"
+          className="menu menu-sm dropdown-content z-20 p-3 mt-6 min-w-[170px] rounded-lg bg-gradient-to-br from-[#121629] via-[#1a1f4d] to-[#0f122b] backdrop-blur-md shadow-lg border border-indigo-700"
         >
           {navbarLinks()}
-        </motion.ul>
+        </ul>
       </div>
+
       <Brand />
     </div>
   );
