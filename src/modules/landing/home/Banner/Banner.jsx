@@ -23,12 +23,11 @@ const Banner = () => {
     <div
       className="
         relative
-        flex flex-col lg:flex-row items-center justify-center
+        flex flex-col lg:flex-row-reverse items-center justify-center
         gap-12 xl:gap-16
         min-h-[50vh]
         bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e]
         rounded-2xl
-        border border-purple-600
         shadow-[0_0_20px_rgba(128,0,255,0.6)]
         overflow-hidden
         px-10 py-14
