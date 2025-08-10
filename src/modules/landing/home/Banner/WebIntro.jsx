@@ -7,6 +7,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import WebIntrCard from "./WebIntrCard";
 
 const steps = [
   {
@@ -73,24 +74,13 @@ const WebIntro = () => {
       {/* Visual Flow Steps */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl w-full text-left mb-14">
         {steps.map(({ icon: Icon, color, title, desc }, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { delay: 0.4 + i * 0.2, duration: 0.8 },
-            }}
-            className={`rounded-2xl border-l-4 p-6 cursor-default bg-[#14142a] shadow-lg border-opacity-80 hover:-translate-y-1 transition-transform duration-300 group ${color}`}
-          >
-            <Icon
-              className={`text-4xl mb-4 transition-transform duration-300 group-hover:rotate-6 drop-shadow-[0_0_8px_currentColor]`}
-            />
-            <h3 className="text-xl font-semibold mb-2 text-gray-100">
-              {title}
-            </h3>
-            <p className="text-gray-400 text-sm">{desc}</p>
-          </motion.div>
+          <WebIntrCard
+            i={i}
+            Icon={Icon}
+            color={color}
+            title={title}
+            desc={desc}
+          />
         ))}
       </div>
 
