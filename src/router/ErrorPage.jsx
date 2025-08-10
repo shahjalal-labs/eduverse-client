@@ -29,7 +29,9 @@ const Errorpage = () => {
           </div>
         </div>
       </div>
-      <CommonFooter />
+      <div className="bg-[#0f111a] border-t border-green-900">
+        <CommonFooter />
+      </div>
     </>
   );
 };

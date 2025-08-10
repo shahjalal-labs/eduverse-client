@@ -5,7 +5,7 @@ import CommonFooter from "./CommonFooter";
 const RootLayout = () => {
   return (
     <>
-      <div className="bg-base-200 navbar bg-base-100 shadow-sm z-10 sticky top-[1px]">
+      <div className="bg-gradient-to-r from-[#1e1e2f] via-[#2b2b45] to-[#1e1e2f] shadow-sm z-10 sticky top-[1px]">
         <Navbar />
       </div>
       <div className="max-container ">
@@ -14,7 +14,7 @@ const RootLayout = () => {
           <Outlet />
         </div>
       </div>
-      <div className="bg-base-200 text-base-content ">
+      <div className="bg-[#0f111a] border-t border-green-900">
         <CommonFooter />
       </div>
     </>

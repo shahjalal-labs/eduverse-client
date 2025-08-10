@@ -111,7 +111,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="navbar max-container bg-gradient-to-r from-[#1e1e2f] via-[#2b2b45] to-[#1e1e2f] shadow-[0_0_15px_#ff3c78aa] sticky top-0 z-50 backdrop-blur-sm border-b border-[#3b2a3d]"
+      className="navbar max-container bg-gradient-to-r from-[#1e1e2f] via-[#2b2b45] to-[#1e1e2f]  sticky top-0 z-50 backdrop-blur-sm"
       {...topToBottom}
     >
       <NavbarStart />

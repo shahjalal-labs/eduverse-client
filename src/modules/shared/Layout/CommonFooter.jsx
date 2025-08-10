@@ -69,7 +69,7 @@ const CommonFooter = () => {
 
 export default CommonFooter; */
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import FooterSocialIcons from "./FooterSocialIcons";
 import { motion } from "framer-motion";
 
