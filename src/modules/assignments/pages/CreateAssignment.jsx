@@ -62,7 +62,7 @@ const CreateAssignment = () => {
     >
       <CreateIntroAnimate />
 
-      <div className="lg:flex justify-center gap-7 *:max-w-[500px] *:mx-auto">
+      <div className="lg:flex justify-center gap-7 *:max--[500px] *:mx-auto">
         <div className="flex-1">
           <CreateAssignmentForm
             onSubmit={onSubmit}
@@ -77,10 +77,10 @@ const CreateAssignment = () => {
           />
         </div>
 
-        <div className="relative max-w-[750px] mx-auto max-lg:mt-10 flex-1 rounded-xl p-4">
+        {/* <div className="relative max-w-[750px] mx-auto max-lg:mt-10 flex-1 rounded-xl p-4">
           <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-[#121629] to-[#1a1f4d] -z-10" />
           <LottieAnimation anime={createLottie2} />
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
