@@ -16,52 +16,52 @@ const features = [
     title: "Create Assignments",
     description:
       "Easily create tasks with titles, marks, difficulty levels, and deadlines.",
-    orb: "bg-pink-500",
+    orb: "bg-pink-400",
   },
   {
     icon: <FaClipboardList className="text-purple-300 text-3xl" />,
     title: "Attempt Assignments",
     description:
       "Submit answers via Google Docs with notes and progress tracking.",
-    orb: "bg-purple-500",
+    orb: "bg-purple-400",
   },
   {
     icon: <FaCheckCircle className="text-indigo-300 text-3xl" />,
     title: "Evaluate Peers",
     description: "Review and grade your peers to sharpen your understanding.",
-    orb: "bg-indigo-500",
+    orb: "bg-indigo-400",
   },
   {
     icon: <FaFilter className="text-fuchsia-300 text-3xl" />,
     title: "Smart Filtering",
     description:
       "Use advanced filters to sort assignments by keyword or difficulty.",
-    orb: "bg-fuchsia-500",
+    orb: "bg-fuchsia-400",
   },
   {
     icon: <FaEdit className="text-pink-200 text-3xl" />,
     title: "Update Assignments",
     description:
       "Edit your posted tasks with validations and auto-filled forms.",
-    orb: "bg-pink-500",
+    orb: "bg-pink-400",
   },
   {
     icon: <FaEye className="text-purple-200 text-3xl" />,
     title: "Assignment Details",
     description: "Deep dive into task metadata, feedback, and comments.",
-    orb: "bg-purple-500",
+    orb: "bg-purple-400",
   },
   {
     icon: <FaChartLine className="text-violet-200 text-3xl" />,
     title: "Track Progress",
     description: "Visualize your academic growth with insightful analytics.",
-    orb: "bg-violet-500",
+    orb: "bg-violet-400",
   },
   {
     icon: <FaGoogleDrive className="text-pink-300 text-3xl" />,
     title: "Google Docs Support",
     description: "Integrate Docs seamlessly for smooth submission and access.",
-    orb: "bg-pink-500",
+    orb: "bg-pink-400",
   },
 ];
 
@@ -74,16 +74,16 @@ const cardVariants = {
   }),
   hover: {
     scale: 1.05,
-    boxShadow: "0 0 30px rgba(255,51,204,0.4)",
+    boxShadow: "0 0 30px rgba(203, 67, 255, 0.6)", // Soft violet glow on hover
   },
 };
 
 const Features = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-[#05060a]">
+    <section className="py-20 bg-gradient-to-b from-[#1a1a40] to-[#2c2564]">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.h2
-          className="text-4xl md:text-5xl font-mono font-bold mb-6 text-pink-400 drop-shadow-[0_0_8px_rgba(255,51,204,0.8)]"
+          className="text-4xl md:text-5xl font-mono font-bold mb-6 text-purple-400 drop-shadow-[0_0_10px_rgba(203,67,255,0.8)]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -91,7 +91,7 @@ const Features = () => {
           🚀 Features That Make You Smarter
         </motion.h2>
         <motion.p
-          className="text-pink-200 text-lg max-w-3xl mx-auto mb-16 font-mono tracking-wide"
+          className="text-purple-200 text-lg max-w-3xl mx-auto mb-16 font-mono tracking-wide"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -110,7 +110,7 @@ const Features = () => {
               whileInView="visible"
               whileHover="hover"
               viewport={{ once: true, amount: 0.3 }}
-              className="relative rounded-3xl p-8 cursor-pointer group bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] overflow-hidden"
+              className="relative rounded-3xl p-8 cursor-pointer group bg-gradient-to-br from-[#1a1a40] via-[#3b3473] to-[#2c2564] overflow-hidden"
             >
               {/* Orb Glow */}
               <div
@@ -118,17 +118,17 @@ const Features = () => {
               />
 
               {/* Icon */}
-              <div className="w-14 h-14 mx-auto rounded-full flex items-center justify-center mb-6 bg-black/30 backdrop-blur-lg shadow-inner">
+              <div className="w-14 h-14 mx-auto rounded-full flex items-center justify-center mb-6 bg-white/10 backdrop-blur-lg shadow-inner">
                 {feature.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-pink-300 group-hover:text-pink-400 duration-300 font-mono">
+              <h3 className="text-xl font-semibold text-purple-300 group-hover:text-purple-400 duration-300 font-mono">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-pink-200/80 text-sm mt-3 tracking-wide leading-relaxed">
+              <p className="text-purple-200/80 text-sm mt-3 tracking-wide leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
