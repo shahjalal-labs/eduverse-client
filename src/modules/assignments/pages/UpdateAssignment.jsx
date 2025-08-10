@@ -112,7 +112,22 @@ const UpdateAssignment = () => {
               setSelectedDate={setSelectedDate}
             />
 
-            <div className="bg-base-200 rounded-xl shadow-lg w-full flex-center max-w-[500px] mx-auto max-lg:mt-9 hover-effect">
+            {/*  <div className="bg-base-200 rounded-xl shadow-lg w-full flex-center max-w-[500px] mx-auto max-lg:mt-9 hover-effect">
+              <LottieAnimation anime={updateManLottie} />
+            </div> */}
+            <div
+              className="
+    bg-gradient-to-br from-gray-900 via-gray-850 to-gray-900
+    rounded-3xl
+    shadow-md shadow-cyan-800/30
+    w-full max-w-[500px]
+    mx-auto max-lg:mt-9
+    flex justify-center items-center
+    hover:shadow-cyan-500/60 hover:scale-[1.03] transition
+    duration-300 ease-in-out
+    hover-effect
+  "
+            >
               <LottieAnimation anime={updateManLottie} />
             </div>
           </div>
