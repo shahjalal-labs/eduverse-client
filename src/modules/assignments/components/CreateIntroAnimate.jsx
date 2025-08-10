@@ -4,7 +4,7 @@ import UseHelmet from "../../../hooks/useHelmet";
 
 const CreateIntroAnimate = () => {
   return (
-    <div className="bg-base-100">
+    <div className="">
       <UseHelmet title="Create Assignment" />
       <div className="w-xs mx-auto w-fit mt-[-95px] ">
         <LottieAnimation anime={createLottie} />
