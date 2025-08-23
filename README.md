@@ -220,9 +220,9 @@ See the [LICENSE](LICENSE) file for full license details.
 | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
 | 👤 **Name**      | Md. Shahjalal                                                                                                     |
 | 📍 **Location**  | Sharifpur, Gazipur, Dhaka, Bangladesh                                                                             |
-| 💼 **LinkedIn**  | [md-sj-825bb4341](https://www.linkedin.com/in/md-sj-825bb4341/)                                                   |
+| 💼 **LinkedIn**  | [shahjalal-labs](https://www.linkedin.com/in/shahjalal-labs)                                                      |
 | 📘 **Facebook**  | [Profile](https://www.facebook.com/profile.php?id=61556383702555)                                                 |
-| ▶️ **YouTube**   | [@muhommodshahjalal9811](https://www.youtube.com/@muhommodshahjalal9811)                                          |
+| ▶️ **YouTube**   | [@muhommodshahjalal9811](https://www.youtube.com/@shahjalal-labs)                                                 |
 | 🧠 **GitHub**    | [shahjalal-labs](https://github.com/shahjalal-labs)                                                               |
 | 🌐 **Portfolio** | [Live Site](http://shahjalal-labs.surge.sh/) • [Code Repo](https://github.com/shahjalal-labs/shahjalal-portfolio) |
 
