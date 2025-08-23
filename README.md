@@ -1,5 +1,7 @@
 # 🚀 EduVerse — Online Group Study & Assignment Portal 🧑‍🏫👥
 
+![Eduverse Intro:](src/assets/images/eduverse.png)
+
 > EduVerse is a **MERN-based**, fully authenticated, and interactive assignment submission platform designed for students and groups. With a modern UI/UX, it enables seamless **collaboration**, **submission**, and **peer evaluation** of assignments.
 
 ---
