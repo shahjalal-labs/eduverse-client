@@ -1,0 +1,5 @@
+src/firebase/firebase.init.js
+.env
+node_modules
+.vite
+dist
