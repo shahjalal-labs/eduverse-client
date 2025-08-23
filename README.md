@@ -12,7 +12,7 @@
 | 🔗 Live Server           | [https://eduverse-server.vercel.app/](https://eduverse-server.vercel.app/) |
 | 📦 Client Source Code    | [GitHub Repo](https://github.com/shahjalal-labs/eduverse-client)           |
 | 📦 Server Source Code    | [GitHub Repo](https://github.com/shahjalal-labs/server-EduVerse-withjwt)   |
-| 🌐 Portfolio Live        | [http://shahjalal-mern.surge.sh/](http://shahjalal-mern.surge.sh/)         |
+| 🌐 Portfolio Live        | [http://shahjalal-labs.surge.sh/](http://shahjalal-labs.surge.sh/)         |
 | 📁 Portfolio Source Code | [GitHub Repo](https://github.com/shahjalal-labs/shahjalal-portfolio)       |
 
 ---
